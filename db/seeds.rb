@@ -21,6 +21,9 @@ Material.destroy_all
 puts "Destroying garments..."
 Garment.destroy_all
 
+puts "Destroying brands..."
+Brand.destroy_all
+
 puts "Destroying users..."
 User.destroy_all
 

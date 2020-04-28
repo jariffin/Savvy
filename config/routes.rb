@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resources :garments, only: [ :new, :create, :show, :index ] do
     resources :purchases, only: [ :create, :index ]
+    resources :blends, only: [ :new, :create ]
   end
 
   resources :purchases, only: [ :destroy ]
