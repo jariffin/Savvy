@@ -1,0 +1,12 @@
+
+<div class="nested-fields">
+  <div class="row">
+    <div class="col-md-6">
+      <%= f.association :material, collection: Material.order('name ASC')  %>
+    </div>
+    <div class="col-md-6">
+      <%= f.input :percentage_material, as: :integer %>
+    </div>
+  </div>
+  <%= link_to_remove_association "remove blend", f %>
+</div>

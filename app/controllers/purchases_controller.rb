@@ -5,10 +5,16 @@ class PurchasesController < ApplicationController
   end
 
   def index
-
+    # @purchases = current_user.purchases - change when sign in works.
+    @purchases = Purchase.all
   end
 
   def destroy
-
+    @purchase = Purchase.find(params[:id])
+    @purchase.destroy
+    redirect_to purchases_path
   end
+
+  private
+
 end
