@@ -7,6 +7,7 @@ class GarmentsController < ApplicationController
   end
 
   def create
+    raise
     @brand = Brand.new
     @garment = Garment.new(garments_params)
     if @garment.save
@@ -14,6 +15,10 @@ class GarmentsController < ApplicationController
     else
       flash.alert = "Garment not saved"
     end
+  end
+
+  def calculate_rating
+
   end
 
   def show
