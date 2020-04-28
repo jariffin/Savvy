@@ -3,4 +3,6 @@ class Garment < ApplicationRecord
 
   has_many :blends
   has_many :materials, through: :blends
+
+  has_one_attached :photo
 end

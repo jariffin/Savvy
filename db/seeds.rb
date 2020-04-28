@@ -75,24 +75,24 @@ def create_blend(material, garment, percentage_material)
   Blend.create!(material_id: material.id, garment_id: garment.id, percentage_material: percentage_material)
 end
 
-jeans = Garment.create!(name: "jeans", brand_id: hm.id)
+jeans = Garment.create!(name: "Jeans", brand_id: hm.id)
 create_blend(cotton, jeans, 80)
 create_blend(polyester, jeans, 20)
 
-shirt = Garment.create!(name: "shirt", brand_id: zara.id )
+shirt = Garment.create!(name: "Shirt", brand_id: zara.id )
 create_blend(cotton, shirt, 100)
 
-linen_coat = Garment.create!(name: "linen_coat", brand_id: uniqlo.id )
+linen_coat = Garment.create!(name: "Linen Coat", brand_id: uniqlo.id )
 create_blend(cotton, linen_coat, 50)
 create_blend(linen, linen_coat, 50)
 
-dress = Garment.create!(name: "dress", brand_id: mango.id )
+dress = Garment.create!(name: "Dress", brand_id: mango.id )
 create_blend(cotton, dress, 64)
 create_blend(modal, dress, 29)
 create_blend(polyamide, dress, 6)
 create_blend(elastane, dress, 1)
 
-pants = Garment.create!(name: "pants", brand_id: massimodutti.id )
+pants = Garment.create!(name: "Pants", brand_id: massimodutti.id )
 create_blend(viscose, pants, 94)
 create_blend(elastane, pants, 6)
 
