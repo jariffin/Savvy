@@ -1,0 +1,27 @@
+
+<div class="container">
+   <% flash.each do |type, msg| %>
+        <div class="alert alert-info">
+          <%= msg %>
+        </div>
+      <% end %>
+  <div class="row">
+    <div class>
+      <h1>Please enter the clothing item's information.</h1>
+
+
+
+      <%= simple_form_for (@garment) do |f| %>
+        <%= f.input :name, as: :string %>
+        <%= f.association :brand, collection: Brand.order('name ASC').uniq  %>
+          <%= f.simple_fields_for :blends do |blend| %>
+            <%= render 'blend_fields', f: blend %>
+          <% end %>
+          <div class="links">
+                <%= link_to_add_association 'add blend', f, :blends %>
+          </div>
+        <%= f.button :submit, class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
