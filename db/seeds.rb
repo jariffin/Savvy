@@ -9,6 +9,9 @@
 
 puts "Cleaning database..."
 
+puts "Destroying purchases..."
+Purchase.destroy_all
+
 puts "Destroying blends"
 Blend.destroy_all
 
@@ -17,9 +20,6 @@ Material.destroy_all
 
 puts "Destroying garments..."
 Garment.destroy_all
-
-puts "Destroying purchases..."
-Purchase.destroy_all
 
 puts "Destroying users..."
 User.destroy_all
@@ -92,5 +92,29 @@ create_blend(modal, dress, 29)
 create_blend(polyamide, dress, 6)
 create_blend(elastane, dress, 1)
 
+pants = Garment.create!(name: "pants", brand_id: massimodutti.id )
+create_blend(viscose, pants, 94)
+create_blend(elastane, pants, 6)
+
+puts "Creating Purchases..."
+
+Purchase.create!(garment_id: jeans.id, user_id: sandy.id)
+Purchase.create!(garment_id: dress.id, user_id: sandy.id)
+Purchase.create!(garment_id: pants.id, user_id: sandy.id)
+
 puts "Done!"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
