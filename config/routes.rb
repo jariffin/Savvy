@@ -8,6 +8,6 @@ Rails.application.routes.draw do
     resources :blends, only: [ :new, :create ]
   end
 
-  resources :purchases, only: [ :destroy ]
+  resources :purchases, only: [ :index, :destroy ]
 
 end
