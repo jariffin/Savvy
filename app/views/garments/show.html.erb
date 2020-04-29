@@ -4,9 +4,9 @@
     <div class="d-flex justify-content-around">
       <div class="container">
         <div class="rating p-3">
-          <h2>Rating</h2>
+          <h4>Rating</h4>
           <!-- calculate rating -->
-          <h1 class= "<%= 100 > 90 ? 'red' : 'green' %>" id="percent"><%= "#{@garment_rating}" %></h1>
+          <h1 class= "<%= @garment.percent_color %>"> <%= @garment_rating%>%</h1>
         </div>
       </div>
       <img src="">
@@ -21,12 +21,14 @@
   <div class="container text-center">
   <!--add to closet-->
   <p>add <%= @garment.name %> to my closet</p>
-  <%= link_to "+", new_garment_path%>
+
+  <p><%= link_to "+", new_garment_purchase_path(@garment)%></p>
   </div>
-</div>
 
 
   <!--scan another item-->
   <%= link_to "scan another ", purchases_path%>
  <!--sign up page-->
   <%= link_to "sign up"%>
+
+</div>

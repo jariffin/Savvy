@@ -6,23 +6,31 @@
       border-radius: 10px;
       background-color: $light-gray;
   }
+  .container h1 {
+    font-weight: bolder;
+  }
+
   .container a {
     text-decoration: none;
     background-color: $light-gray;
+    border: 2px #C0C0C0;
+    color: gray;
     border-radius: 50%;
-    border: 2px solid $gray;
-    box-shadow: 3px 1px;
-    padding: 8px;
+    box-shadow: 3px 2px 10px gray;
     font-weight: bolder;
-    font-size: 28px;
+    font-size: 40px;
+    width: 60px;
+    height: 60px;
+    display: inline-block;
 
     :hover{
       box-shadow: 0px 0px;
+      color: white;
     }
   }
 
   .red {
-    color: $success;
+    color: $danger;
   }
 
   .yellow {
@@ -30,7 +38,7 @@
   }
 
   .green {
-    color: $danger;
+    color: $success;
   }
 
 }

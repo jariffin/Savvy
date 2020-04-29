@@ -32,5 +32,13 @@ class Garment < ApplicationRecord
 
     return rating.sum
   end
-
+  def percent_color
+      if (self.percentage < 90 && self.percentage > 50)
+        'yellow'
+      elsif self.percentage < 50
+        'red'
+      else
+        'green'
+      end
+  end
 end
