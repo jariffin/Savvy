@@ -15,13 +15,7 @@ class Garment < ApplicationRecord
     material = []
 
     self.materials.each do |m|
-      if m.synthetic == true
-        value = 0
-        material << value
-      else
-        value = 1
-        material << value
-      end
+        material << m.material_rating
     end
 
     self.blends.each do |b|
@@ -30,7 +24,7 @@ class Garment < ApplicationRecord
 
     rating = percentages.zip(material).map{|x,y| x * y}
 
-    return rating.sum
+    return (rating.sum)/10
   end
 
 end
