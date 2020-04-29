@@ -1,7 +1,7 @@
 class PurchasesController < ApplicationController
 
   def create
-
+    redirect_to purchases_path
   end
 
   def index
@@ -16,5 +16,8 @@ class PurchasesController < ApplicationController
   end
 
   private
+
+  def purchases_params
+  end
 
 end
