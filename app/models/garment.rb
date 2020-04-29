@@ -10,4 +10,27 @@ class Garment < ApplicationRecord
   accepts_nested_attributes_for :blends, reject_if: :all_blank, allow_destroy: true
   # accepts_ nested_attributes_for :materials, reject_if: :all_blank, allow_destroy: true
 
+  def percentage
+    percentages = []
+    material = []
+
+    self.materials.each do |m|
+      if m.synthetic == true
+        value = 0
+        material << value
+      else
+        value = 1
+        material << value
+      end
+    end
+
+    self.blends.each do |b|
+      percentages << b.percentage_material
+    end
+
+    rating = percentages.zip(material).map{|x,y| x * y}
+
+    return rating.sum
+  end
+
 end
