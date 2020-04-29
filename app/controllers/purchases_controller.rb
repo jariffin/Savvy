@@ -10,6 +10,7 @@ class PurchasesController < ApplicationController
   end
 
   def destroy
+    @purchase = Purchase.find(params[:id])
     @purchase.destroy
     redirect_to purchases_path
   end

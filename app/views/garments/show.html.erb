@@ -1,0 +1,27 @@
+<div class="background p-3">
+  <h1>Results for your <%= @garment.name %></h1>
+  <div class="rating-box col-md-6 container center-align">
+    <div class="d-flex justify-content-around">
+      <div class="container">
+        <div class="rating p-3">
+          <h2>Rating</h2>
+          <!-- calculate rating -->
+          <h1>90%</h1>
+        </div>
+      </div>
+      <img src="">
+      <div class="container p-3">
+        <h3>Materials</h3>
+         <% @garment.blends.each do |blend| %>
+         <p><em><%= blend.percentage_material %>% <%= blend.material.name %></em></p>
+         <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+  <!--add to closet-->
+   <%= link_to "add #{@garment.name} to closet"%>
+  <!--scan another item-->
+  <%= link_to "scan another, "%>
+ <!--sign up page-->
+  <%= link_to "sign up"%>
