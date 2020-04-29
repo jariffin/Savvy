@@ -1,7 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
-  padding-bottom: 50px;
+  padding-bottom: 25px;
+  padding-top: 25px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -12,9 +13,15 @@
   width: 40px;
 }
 .logo {
-  position: absolute;
+  position: center;
+  padding-left: 560px;
+
+
+}
+.fa-user {
+  position: right;
   left: 50%;
   margin-left: -50px;
-  cursor: pointer;
-  transition: 0.3s;
+  color: black;
+
 }
