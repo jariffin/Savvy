@@ -34,34 +34,46 @@ puts "Creating Users..."
 sandy = User.create!(email:"sandy@gmail.com",
                      password: "123456")
 
-puts "Creating Materials..."
+puts "Creating Group 1 (A+/A) Materials..."
 
+hemp = Material.create!(name: "Hemp", synthetic: false, material_rating: 10)
+linen = Material.create!(name: "Linen", synthetic: false, material_rating: 10)
+flax = Material.create!(name: "Flax", synthetic: false, material_rating: 10)
+lyocell = Material.create!(name: "Lyocell", synthetic: false, material_rating: 10)
+tencel = Material.create!(name: "Tencel", synthetic: false, material_rating: 10)
+jute = Material.create!(name: "Jute", synthetic: false, material_rating: 10)
+pinatex = Material.create!(name: "Pinatex", synthetic: false, material_rating: 10)
+nettle = Material.create!(name: "Nettle", synthetic: false, material_rating: 10)
+cotton_organic = Material.create!(name: "Cotton (Organic)", synthetic: false, material_rating: 10)
+soy = Material.create!(name: "Soy", synthetic: false, material_rating: 10)
+soy_silk = Material.create!(name: "Soy Silk", synthetic: false, material_rating: 10)
 
-cotton = Material.create!(name: "cotton", synthetic: false)
-silk = Material.create!(name: "silk", synthetic: false)
-wool = Material.create!(name: "wool", synthetic: false)
-cashmere = Material.create!(name: "cashmere", synthetic: false)
-linen = Material.create!(name: "linen", synthetic: false)
-hemp = Material.create!(name: "hemp", synthetic: false)
+puts "Creating Group 2 (B+/B) Materials..."
 
-bamboo = Material.create!(name: "bamboo", synthetic: false)
-flax = Material.create!(name: "flax", synthetic: false)
-rayon = Material.create!(name: "rayon", synthetic: false)
-lyocell = Material.create!(name: "lyocell", synthetic: false)
-modal = Material.create!(name: "modal", synthetic: false)
-viscose = Material.create!(name: "viscose", synthetic: false)
+rayon = Material.create!(name: "Rayon", synthetic: false, material_rating: 7)
+viscose = Material.create!(name: "Viscose", synthetic: false, material_rating: 7)
+bamboo = Material.create!(name: "Bamboo", synthetic: false, material_rating: 7)
+cotton = Material.create!(name: "Cotton", synthetic: false, material_rating: 7)
+modal = Material.create!(name: "Modal", synthetic: false, material_rating: 7)
+wool = Material.create!(name: "Wool", synthetic: false, material_rating: 7)
+cashmere = Material.create!(name: "Cashmere", synthetic: false, material_rating: 7)
+silk = Material.create!(name: "Silk", synthetic: false, material_rating: 7)
+ramie = Material.create!(name: "Ramie", synthetic: false, material_rating: 7)
+down = Material.create!(name: "Down", synthetic: false, material_rating: 7)
 
+puts "Creating Group 2 (C+/C) Materials..."
 
-polyester = Material.create!(name: "polyester", synthetic: true)
-acrylic = Material.create!(name: "acrylic", synthetic: true)
-spandex = Material.create!(name: "spandex", synthetic: true)
-nylon = Material.create!(name: "nylon", synthetic: true)
-polyurethane = Material.create!(name: "polyurethane", synthetic: true)
-
+leather = Material.create!(name: "Leather", synthetic: false, material_rating: 3)
+fur = Material.create!(name: "Fur", synthetic: false, material_rating: 3)
+polyester = Material.create!(name: "Polyester", synthetic: true, material_rating: 3)
+acrylic = Material.create!(name: "Acrylic", synthetic: true, material_rating: 3)
+spandex = Material.create!(name: "Spandex", synthetic: true, material_rating: 3)
+nylon = Material.create!(name: "Nylon", synthetic: true, material_rating: 3)
+polyurethane = Material.create!(name: "Polyurethane", synthetic: true, material_rating: 3)
 # synonym for nylon
-polyamide = Material.create!(name: "polyamide", synthetic: true)
+polyamide = Material.create!(name: "Polyamide", synthetic: true, material_rating: 3)
 # synonym for spandex
-elastane = Material.create!(name: "elastane", synthetic: true)
+elastane = Material.create!(name: "Elastane", synthetic: true, material_rating: 3)
 
 
 puts "Creating Brands..."
