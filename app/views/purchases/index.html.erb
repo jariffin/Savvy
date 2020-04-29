@@ -1,10 +1,9 @@
 <div class="main-container">
   <div class="title">
     <h1>My Closet <i class="fas fa-seedling"></i>
-      <i class="fas fa-globe-africa"></i>
-      <i class="fas fa-barcode"></i>
     </h1>
-    <h2>Very SAVVY. You are <b><%=@average.round(2)%>%</b> eco-friendly.</h2>
+    <h2>Very SAVVY. You are <b><%=@average.round(1)%>%</b> eco-friendly.</h2>
+    <p><%= link_to "Add another item", user_session_path %></p>
   </div>
 
   <div class="container" style="background-image: url('<%= cl_image_path("boris-misevic-atijctuqUl8-unsplash_fq47r4") %>')">
