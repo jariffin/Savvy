@@ -7,22 +7,18 @@ class GarmentsController < ApplicationController
   end
 
   def create
-    raise
     @brand = Brand.new
     @garment = Garment.new(garments_params)
     if @garment.save
-      flash.alert = "Garment saved"
+      redirect_to garment_path(@garment)
     else
       flash.alert = "Garment not saved"
     end
   end
 
-  def calculate_rating
-
-  end
-
   def show
     @garment = Garment.find(params[:id])
+    @garment_rating = @garment.percentage
   end
 
   def index
