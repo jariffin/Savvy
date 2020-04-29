@@ -7,6 +7,8 @@ class PurchasesController < ApplicationController
   def index
     # @purchases = current_user.purchases - change when sign in works.
     @purchases = Purchase.all
+    percentages = @purchases.map {|purchase| purchase.garment.percentage }
+    @average = percentages.sum(0.0) / percentages.size
   end
 
   def destroy
