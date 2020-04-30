@@ -2,23 +2,19 @@
 <div class="background p-3">
   <h2 class="results">Results for your <%= @garment.name %></h2>
   <div class="rating-box col-md-5 container center-align shadow">
-      <h4>Eco-Rating</h4>
-      <h1 class= "<%= @garment.percent_color %>"> <%= @garment_rating%>%</h1>
-
-
-      <h4>Materials</h4>
-        <% @garment.blends.each do |blend| %>
-        <p class="material"><em><%= blend.percentage_material %>% <%= blend.material.name %></em></p>
-        <% end %>
-
-  </div>
+    <h4>Eco-Rating</h4>
+    <h1 class= "<%= @garment.percent_color %>"> <%= @garment_rating%>%</h1>
+    <h4>Materials</h4>
+    <% @garment.blends.each do |blend| %>
+    <p class="material"><em><%= blend.percentage_material %>% <%= blend.material.name %></em></p>
+    <% end %>
+ </div>
   <div class="rating-box col-md-5 container center-align shadow text-center">
-    <p class="button-text">Do you own this <%= @garment.name %>? Add to your closet for a new eco-rating!</p>
-    <p><%= link_to '<i class="fas fa-plus"></i>'.html_safe, new_garment_purchase_path(@garment)%></p>
-    <p class="button-text">scan another</p>
-    <%= link_to '<i class="fas fa-redo-alt"></i>'.html_safe, new_garment_path %>
+    <p>Do you own this <%= @garment.name %>? Add to your closet for a new eco-rating!</p>
+    <p class="button-text"><%= link_to '<i class="fas fa-plus"></i>'.html_safe, new_garment_purchase_path(@garment)%></p>
+    <p>scan another</p>
+    <p class="button-text"><%= link_to '<i class="fas fa-redo-alt"></i>'.html_safe, new_garment_path %></p>
   </div>
-
  <!--sign up page tbd-->
 </div>
 
