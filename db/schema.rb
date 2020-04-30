@@ -57,7 +57,6 @@ ActiveRecord::Schema.define(version: 2020_04_30_130516) do
   create_table "garments", force: :cascade do |t|
     t.string "name"
     t.bigint "brand_id", null: false
-    t.string "photo"
     t.index ["brand_id"], name: "index_garments_on_brand_id"
   end
 
