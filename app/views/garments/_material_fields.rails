@@ -1,4 +1,0 @@
-<div class="nested_fields">
-  <%= m.input :name, collection: Material.order('name ASC'), :label => "Material" %>
-  <%= link_to_remove_association 'remove material', m %>
-</div>
