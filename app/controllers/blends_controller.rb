@@ -10,9 +10,9 @@ class BlendsController < ApplicationController
     @garment = Garment.find(params[:garment_id])
     @blend.garment_id = @garment.id
     if @blend.save
-      flash.alert = "Blend saved"
+      flash.now = "Blend saved"
     else
-      flash.alert = "Blend not saved"
+      flash.now = "Blend not saved"
     end
   end
 
