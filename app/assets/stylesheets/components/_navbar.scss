@@ -12,14 +12,17 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
-.logo {
-  position: center;
-  padding-left: 560px;
-
-
+.nav-link {
+  text-align: center;
+  color: black;
+  text-decoration: none;
 }
+a:hover {
+  color:black;
+}
+
 .fa-user {
-  position: right;
+  text-align: right;
   left: 50%;
   margin-left: -50px;
   color: black;
