@@ -12,7 +12,7 @@ class GarmentsController < ApplicationController
     if @garment.save
       redirect_to garment_path(@garment)
     else
-      flash.alert = "Garment not saved"
+      render :new
     end
   end
 

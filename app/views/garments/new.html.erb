@@ -1,30 +1,33 @@
 
 <div class="container">
-  <div class>
-   <% flash.each do |type, msg| %>
+  <div class="row justify-content-center">
+    <div class=col-md-8>
+      <h1>Please enter the clothing information.</h1>
+
+      <% flash.each do |type, msg| %>
         <div class="alert alert-info">
           <%= msg %>
         </div>
       <% end %>
-  <div class="row">
-    <div class>
-      <h1>Please enter the clothing item's information.</h1>
-
-
 
       <%= simple_form_for (@garment) do |f| %>
+
         <%= f.input :name, as: :string %>
-        <%= f.association :brand, collection: Brand.order('name ASC').uniq  %>
+        <%= f.association :brand, collection: Brand.order('name ASC') %>
+
+        <div class="bg-warning text-center">
+          <em> <%= f.error :base %> </em>
+        </div>
+
           <%= f.simple_fields_for :blends do |blend| %>
             <%= render 'blend_fields', f: blend %>
           <% end %>
           <div class="links">
-                <%= link_to_add_association 'add blend', f, :blends %>
+                <%= link_to_add_association 'Add material', f, :blends %>
           </div>
           <br>
-        <%= f.button :submit, class: "btn btn-primary" %>
+        <%= f.button :submit, class: "btn btn-dark btn-block" %>
       <% end %>
     </div>
-  </div>
   </div>
 </div>
