@@ -3,10 +3,9 @@ class Garment < ApplicationRecord
 
   has_many :blends
   has_many :materials, through: :blends
-  has_one_attached :photo
+  has_one_attached :image
 
   validates :name, presence: true
-
   validate :max_percentage_has_not_been_reached
 
   accepts_nested_attributes_for :blends, reject_if: :all_blank, allow_destroy: true
