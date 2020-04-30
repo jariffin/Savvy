@@ -1,4 +1,4 @@
- .container a {
+ .button-text {
     text-decoration: none;
     background-color: $light-gray;
     border: 2px #C0C0C0;
@@ -12,7 +12,7 @@
     display: inline-block;
   }
 
-   .container a:hover{
+   .button-text:hover{
       box-shadow: 3px 3px 15px #696969;
       color: #696969;
       border: 4px #D3D3D3;
