@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to "/", class: "navbar-brand" do %>
-  <div class="logo">S A V V Y .</div>
+  <a href="/", class="nav-link">S A V V Y .</a>
     <% if user_signed_in? %>
         <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "nav-link") %>
     <% else %>
