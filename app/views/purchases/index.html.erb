@@ -2,14 +2,15 @@
   <div class="title">
     <h1>My Closet <i class="fas fa-seedling"></i>
     </h1>
-    <h2>Very SAVVY. You are <b><%=@average.round(1)%>%</b> eco-friendly.</h2>
-    <p><%= link_to "Add another item", user_session_path %></p>
+    <h2>You are <b><%=@average.round(1)%>%</b> eco-friendly.</h2>
+    <p><%= link_to "Add another item", new_garment_path %></p>
   </div>
 
-  <div class="container" style="background-image: url('<%= cl_image_path("boris-misevic-atijctuqUl8-unsplash_fq47r4") %>')">
+  <div class="container" style="background-image: url('<%= cl_image_path("https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-1.2.1&auto=format&fit=crop&w=1055&q=80") %>')">
     <div class="cards">
       <% @purchases.each do |purchase| %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path(purchase.photo.key, width: 300, height: 400, crop: :fill) if purchase.photo.attached? %>')">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path(purchase.garment.image.key, width: 300, height: 400, crop: :fill) if purchase.garment.image.attached? %>')">
+        <div class="card-text">
         <div class="card-title">
           <h3>
             <%= purchase.garment.name %>
@@ -27,6 +28,7 @@
           data: { confirm: "Delete this purchased item?" } do %>
           <i class="fas fa-trash"></i>
           <% end %>
+          </div>
         </div>
       </div>
       <% end %>
