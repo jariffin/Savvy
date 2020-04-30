@@ -1,34 +1,24 @@
+
 <div class="background p-3">
-  <h1>Results for your <%= @garment.name %></h1>
-  <div class="rating-box col-md-6 container center-align shadow">
-    <div class="d-flex justify-content-around">
-      <div class="container">
-        <div class="rating p-3">
-          <h4>Rating</h4>
-          <!-- calculate rating -->
-          <h1 class= "<%= @garment.percent_color %>"> <%= @garment_rating%>%</h1>
-        </div>
-      </div>
-      <img src="">
-      <div class="container p-3">
-        <h4>Materials</h4>
-         <% @garment.blends.each do |blend| %>
-         <p><em><%= blend.percentage_material %>% <%= blend.material.name %></em></p>
-         <% end %>
-      </div>
-    </div>
-  </div>
-  <div class="container text-center">
-  <!--add to closet-->
-  <p>add <%= @garment.name %> to my closet</p>
+  <h2 class="results">Results for your <%= @garment.name %></h2>
+  <div class="rating-box col-md-5 container center-align shadow">
+      <h4>Eco-Rating</h4>
+      <h1 class= "<%= @garment.percent_color %>"> <%= @garment_rating%>%</h1>
 
-  <p><%= link_to "+", new_garment_purchase_path(@garment)%></p>
+
+      <h4>Materials</h4>
+        <% @garment.blends.each do |blend| %>
+        <p class="material"><em><%= blend.percentage_material %>% <%= blend.material.name %></em></p>
+        <% end %>
+
+  </div>
+  <div class="rating-box col-md-5 container center-align shadow text-center">
+    <p class="button-text">Do you own this <%= @garment.name %>? Add to your closet for a new eco-rating!</p>
+    <p><%= link_to '<i class="fas fa-plus"></i>'.html_safe, new_garment_purchase_path(@garment)%></p>
+    <p class="button-text">scan another</p>
+    <%= link_to '<i class="fas fa-redo-alt"></i>'.html_safe, new_garment_path %>
   </div>
 
-
-  <!--scan another item-->
-  <%= link_to "scan another ", purchases_path%>
- <!--sign up page-->
-  <%= link_to "sign up"%>
-
+ <!--sign up page tbd-->
 </div>
+

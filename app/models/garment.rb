@@ -21,13 +21,11 @@ class Garment < ApplicationRecord
     self.blends.each do |b|
       percentages << b.percentage_material
     end
-
     rating = percentages.zip(material).map{|x,y| x * y}
-
     return (rating.sum)/10
   end
   def percent_color
-      if (self.percentage < 90 && self.percentage > 50)
+      if (self.percentage < 85 && self.percentage > 50)
         'yellow'
       elsif self.percentage < 50
         'red'
