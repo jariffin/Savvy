@@ -1,10 +1,11 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "/", class: "navbar-brand" do %>
-  <a href="/", class="nav-link">S A V V Y .</a>
+  <%= link_to "S A V V Y .", "/", class: "nav-link" %>
+
     <% if user_signed_in? %>
-        <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "nav-link") %>
+      <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "btn btn-primary") %>
     <% else %>
-        <a href="users/sign_in"><i class="far fa-user"></i>
-    <% end %>
+      <a href="users/sign_in"><i class="far fa-user"></i></a>
     <% end %>
 </div>
+
+
