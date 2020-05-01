@@ -35,6 +35,19 @@ class Garment < ApplicationRecord
       end
   end
 
+  def slogan
+    positive_slogan = ['Great choice!', 'GO ECO!', 'Perfect!', 'Welcome to the ECO club!', 'Small ecological footprint, and a giant leap for mankind!']
+    neuteral_slogan = ['I can see you are trying!', 'Continue this way to break the ECO barrier in your life']
+    negative_slogan = ['Seriously?!', 'Maybe you will look for something better?', 'Don\'t tell me you want to buy that..', 'Not approved by ECO team', 'Welcome to the dark side!']
+    if percent_color == 'green'
+      positive_slogan.sample
+    elsif percent_color == 'yellow'
+      neuteral_slogan.sample
+    else
+      negative_slogan.sample
+    end
+  end
+
   private
 
     def max_percentage_has_not_been_reached
