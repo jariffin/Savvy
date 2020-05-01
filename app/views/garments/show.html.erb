@@ -1,37 +1,37 @@
 
 <div class="background p-3">
   <div class="rating-box col-md-5 container center-align shadow">
-    <div class="ruler d-flex justify-content-around">
-      <div class="box">
-      <p>0-49</p>
-      <p>Not eco recommended</p>
-      </div>
-      <div class="box">
-      <p>50-84</p>
-      <p>You can do better!</p>
-      </div>
-      <div class="box">
-      <p>85-100</p>
-      <p>Excellent choice!</p>
-      </div>
-
-    </div>
-    <h4>Your Eco-Rating for <%= @garment.name %></h4>
+    <h4>Your ECO-rating for <%= @garment.name %></h4>
+    <p id="slogan"><small> <%= @garment.slogan %> </small></p>
     <h1 class= "<%= @garment.percent_color %>"> <%= @garment_rating%>%</h1>
-    <h4><%= link_to 'Materials', materials_path %></h4>
+    <h5><%= link_to 'Materials', materials_path %></h5>
     <% @garment.blends.each do |blend| %>
     <p class="material"><em><%= blend.percentage_material %>% <%= blend.material.name %></em></p>
     <% end %>
-  <p> <small> <%= @garment.slogan %> </small></p>
+    <div class="ruler d-flex justify-content-around">
+      <div class="box">
+        <p>0-49</p>
+        <p>Not eco recommended</p>
+      </div>
+      <div class="box">
+        <p>50-84</p>
+        <p>You can do better!</p>
+      </div>
+      <div class="box">
+        <p>85-100</p>
+        <p>Excellent choice!</p>
+      </div>
+    </div>
  </div>
   <div class="rating-box col-md-5 container center-align shadow text-center">
-    <p>Do you own this <%= @garment.name %>? Add to your closet to keep track of your eco-rating!</p>
+    <p>Do you own this <%= @garment.name %>? Add to your closet to keep track of your ECO-rating!</p>
     <p class="button-text"><%= link_to '<i class="fas fa-plus"></i>'.html_safe, new_garment_purchase_path(@garment)%></p>
     <p>scan another</p>
     <p class="button-text"><%= link_to '<i class="fas fa-redo-alt"></i>'.html_safe, new_garment_path %></p>
-    <p><%= link_to "Visit closet", purchases_path, class: "btn btn-primary mt-3" %></p>
+    <div>
+      <%= link_to "Visit closet", purchases_path, class: "closet-btn btn btn-primary mt-3 align" %>
+    </div>
+    </div>
   </div>
-  </div>
- <!--sign up page tbd-->
 </div>
 
