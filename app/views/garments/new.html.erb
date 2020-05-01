@@ -27,13 +27,18 @@
             <% end %>
             <div class="links">
                   <%= link_to_add_association 'Add material', f, :blends %>
+
             </div>
-            <br>
+
           <%= f.input :image, as: :file %>
           <%= f.button :submit, class: "btn btn-dark btn-block" %>
+
         <% end %>
         <br>
         <div class="">*stay tuned for our future scanning technology!</div>
+        <div class="text-right">
+         <p><%= link_to 'Read about materials', materials_path %></p>
+         </div>
       </div>
     </div>
   </div>
