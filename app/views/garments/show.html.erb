@@ -2,9 +2,19 @@
 <div class="background p-3">
   <div class="rating-box col-md-5 container center-align shadow">
     <div class="ruler d-flex justify-content-around">
+      <div class="box">
       <p>0-49</p>
+      <p>Not eco recommended</p>
+      </div>
+      <div class="box">
       <p>50-84</p>
+      <p>You can do better!</p>
+      </div>
+      <div class="box">
       <p>85-100</p>
+      <p>Excellent choice!</p>
+      </div>
+
     </div>
     <h4>Your Eco-Rating for <%= @garment.name %></h4>
     <h1 class= "<%= @garment.percent_color %>"> <%= @garment_rating%>%</h1>
