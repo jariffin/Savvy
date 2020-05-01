@@ -18,14 +18,14 @@
     </div>
     <h4>Your Eco-Rating for <%= @garment.name %></h4>
     <h1 class= "<%= @garment.percent_color %>"> <%= @garment_rating%>%</h1>
-    <h4>Materials</h4>
+    <h4><%= link_to 'Materials', materials_path %></h4>
     <% @garment.blends.each do |blend| %>
     <p class="material"><em><%= blend.percentage_material %>% <%= blend.material.name %></em></p>
     <% end %>
   <p> <small> <%= @garment.slogan %> </small></p>
  </div>
   <div class="rating-box col-md-5 container center-align shadow text-center">
-    <p>Do you own this <%= @garment.name %>? Add to your closet for a new eco-rating!</p>
+    <p>Do you own this <%= @garment.name %>? Add to your closet to keep track of your eco-rating!</p>
     <p class="button-text"><%= link_to '<i class="fas fa-plus"></i>'.html_safe, new_garment_purchase_path(@garment)%></p>
     <p>scan another</p>
     <p class="button-text"><%= link_to '<i class="fas fa-redo-alt"></i>'.html_safe, new_garment_path %></p>
