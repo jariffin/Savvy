@@ -2,7 +2,7 @@
   <div class="title">
     <h1>My Closet <i class="fas fa-seedling"></i>
     </h1>
-    <h2>You are <strong><%=@average.round(1)%>%</strong> eco-friendly out of <%= @purchases.count %> purchases.</h2>
+    <h2>Your total ECO score is <strong><%=@average.round(1)%>%</strong> out of <%= @purchases.count %> purchases.</h2>
     <p><%= link_to "Scan another item", new_garment_path, class: "btn btn-primary mt-3" %>
     </p>
   </div>
@@ -11,6 +11,7 @@
     <div class="cards">
       <% @purchases.each do |purchase| %>
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('<%= cl_image_path(purchase.garment.image.key, width: 300, height: 400, crop: :fill) if purchase.garment.image.attached? %>')">
+        <%= link_to garment_path(purchase.garment) do %>
         <div class="card-text">
           <div class="card-title">
             <h3><strong><%= purchase.garment.name %></strong></h3>
@@ -29,6 +30,7 @@
             <% end %>
           </div>
         </div>
+        <% end %>
       </div>
       <% end %>
     </div>

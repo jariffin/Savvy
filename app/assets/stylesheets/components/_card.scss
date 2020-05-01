@@ -49,6 +49,11 @@
   transform: scale(1.05);
 }
 
+.card-category a {
+  text-decoration: none;
+  color: white;
+}
+
 .card-category .card-title h3 {
   display: flex;
   position: relative;
