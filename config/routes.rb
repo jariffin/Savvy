@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   resources :garments, only: [ :new, :create, :show, :index ] do
-    resources :purchases, only: [ :new, :index ]
+    resources :purchases, only: [ :new ]
     resources :blends, only: [ :new, :create ]
   end
 

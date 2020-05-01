@@ -18,8 +18,6 @@ class BlendsController < ApplicationController
 
   private
 
-  # does this mean I need to already have a material_id?
-  # possible with just percentage_material?
   def blends_params
     params.require(:blend).permit(:material_id, :garment_id, :percentage_material)
   end
