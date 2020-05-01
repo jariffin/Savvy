@@ -9,15 +9,18 @@
   font-size: 70px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 35px;
 }
 
 .rating-box h4 {
-  margin-top: 32px;
+  padding-top: 8px;
+}
+
+.rating-box .ruler {
+  margin-bottom: 16px;
 }
 
 .material {
-  font-size: 30px;
+
 }
 
 .red {
