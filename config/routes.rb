@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   end
 
   resources :purchases, only: [ :index, :destroy ]
+  resources :materials, only: [ :index, :show ]
 
 end
