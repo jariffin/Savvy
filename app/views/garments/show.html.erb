@@ -1,8 +1,7 @@
 
 <div class="background p-3">
-  <h2 class="results">Results for your <%= @garment.name %></h2>
   <div class="rating-box col-md-5 container center-align shadow">
-    <h4>Eco-Rating</h4>
+    <h4>Your Eco-Rating for <%= @garment.name %></h4>
     <h1 class= "<%= @garment.percent_color %>"> <%= @garment_rating%>%</h1>
     <h4>Materials</h4>
     <% @garment.blends.each do |blend| %>
@@ -14,6 +13,8 @@
     <p class="button-text"><%= link_to '<i class="fas fa-plus"></i>'.html_safe, new_garment_purchase_path(@garment)%></p>
     <p>scan another</p>
     <p class="button-text"><%= link_to '<i class="fas fa-redo-alt"></i>'.html_safe, new_garment_path %></p>
+    <p><%= link_to "Visit closet", purchases_path, class: "btn btn-primary mt-3" %></p>
+  </div>
   </div>
  <!--sign up page tbd-->
 </div>
