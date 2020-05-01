@@ -42,12 +42,17 @@
   text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.card-category:hover {
+  transform: scale(1.05);
 }
 
 .card-category .card-title h3 {
   display: flex;
-  justify-content: center;
   position: relative;
+  justify-content: center;
   font-weight: bold;
   margin-top: 80px;
 }
@@ -59,10 +64,6 @@
   margin-top: 32px;
   margin-bottom: 0;
   border: 2px;
-}
-
-.card-category .card-info-1 p:hover {
-  font-size: 21px;
 }
 
 .card-category .card-info-2 p {
