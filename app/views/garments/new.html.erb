@@ -2,10 +2,10 @@
 <div class="background-cover">
 <div class="container-form mx-auto">
   <div class="row-form mx-auto">
-    <div class="my-auto">
+    <div class="col-md-10 my-auto">
       <div class="bg-light py-3 px-5">
         <div class="">
-          <h1>Please enter the clothing information.</h1>
+          <h1 class="text-center">Please enter the clothing information.</h1>
         </div>
         <% flash.each do |type, msg| %>
           <div class="alert alert-info">
@@ -15,14 +15,26 @@
         <br>
 
         <%= simple_form_for (@garment) do |f| %>
-
-          <%= f.input :name, as: :string %>
-          <%= f.association :brand, collection: Brand.order('name ASC') %>
-
+          <div class="row">
+            <div class="col-md-6">
+              <%= f.input :name, as: :string %>
+              <%= f.association :brand, collection: Brand.order('name ASC') %>
+            </div>
+              <div class="col-md-6">
+              <%= f.input :tag, as: :file, label: "Garment Tag" %>
+              <%= f.input :image, as: :file, label: "Garment Photo" %>
+              <br>
+            </div>
+          </div>
+          <br>
+          <%= f.button :submit, 'Calculate the ECO-score!', class: "btn btn-dark btn-block" %>
+          <br>
           <div class="bg-warning text-center">
             <em> <%= f.error :base %> </em>
           </div>
-
+          <br>
+          <h5 class="text-center">OR manually fill in the materials & percentages:</h5>
+          <br>
             <%= f.simple_fields_for :blends do |blend| %>
               <%= render 'blend_fields', f: blend %>
             <% end %>
@@ -30,11 +42,6 @@
                   <%= link_to_add_association 'Add material', f, :blends %>
 
             </div>
-
-          <%= f.input :image, as: :file %>
-          <%= f.input :tag, as: :file %>
-          <%= f.button :submit, class: "btn btn-dark btn-block" %>
-
         <% end %>
         <br>
         <div class="">*stay tuned for our future scanning technology!</div>

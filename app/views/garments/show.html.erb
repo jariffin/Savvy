@@ -25,7 +25,6 @@
  </div>
   <div class="rating-box col-md-5 container center-align shadow text-center">
 
-    <p>hello  <%= @garment.blends.last.material.name %></p>
     <p>Do you own this <%= @garment.name %>? Add to your closet to keep track of your ECO-rating!</p>
     <p class="button-text"><%= link_to '<i class="fas fa-plus"></i>'.html_safe, new_garment_purchase_path(@garment)%></p>
     <p>scan another</p>

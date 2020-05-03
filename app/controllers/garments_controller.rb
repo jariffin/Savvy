@@ -9,21 +9,18 @@ class GarmentsController < ApplicationController
   def create
     @brand = Brand.new
     @garment = Garment.new(garments_params)
-    tag_text = RTesseract.new(params[:garment][:tag].tempfile.path).to_s
-    @garment.tag_text = tag_text
-    @garment.tag_text_to_blends
-    if @garment.save
+    if @garment.blends.length.zero?
+      tag_text = RTesseract.new(params[:garment][:tag].tempfile.path).to_s
+      @garment.tag_text = tag_text
+      @garment.tag_text_to_blends
+      render :new
+    elsif
+      @garment.save
       redirect_to garment_path(@garment)
     else
       render :new
     end
   end
-
-  # def scan
-  #   @garment = Garment.new
-
-  #   @scan.to_s
-  # end
 
   def show
     @garment = Garment.find(params[:id])
