@@ -4,9 +4,10 @@ class Garment < ApplicationRecord
   has_many :blends
   has_many :materials, through: :blends
   has_one_attached :image
+  has_one_attached :tag
 
   validates :name, presence: true
-  validate :max_percentage_has_not_been_reached
+  # validate :max_percentage_has_not_been_reached
 
   accepts_nested_attributes_for :blends, reject_if: :all_blank, allow_destroy: true
 
@@ -24,6 +25,35 @@ class Garment < ApplicationRecord
     rating = percentages.zip(material).map{|x,y| x * y}
     return (rating.sum)/10
   end
+
+  def create_blend(material, garment, percentage_material)
+    garment.blends << Blend.new(material: material, percentage_material: percentage_material)
+  end
+
+
+
+  def tag_text_to_blends
+    materials = []
+    percentages = []
+
+    composition = self.tag_text.split("%")
+    composition.each_with_index do |c, i|
+      Material.all.each do |m|
+        if c.downcase.include?(m.name.downcase)
+          materials << m
+        end
+      end
+
+      numcap = c.match(/\d+/)
+      if !numcap.nil?
+        percentages << numcap[0]
+      end
+
+    end
+    percentages.zip(materials).each do |pct, m| create_blend(m, self, pct)
+    end
+  end
+
 
   def percent_color
       if (self.percentage < 85 && self.percentage > 50)

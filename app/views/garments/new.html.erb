@@ -32,6 +32,7 @@
             </div>
 
           <%= f.input :image, as: :file %>
+          <%= f.input :tag, as: :file %>
           <%= f.button :submit, class: "btn btn-dark btn-block" %>
 
         <% end %>
@@ -49,6 +50,11 @@
               <p><%= link_to materials_path do %>
                       <i class="fas fa-book-open"></i>
                     <% end %></p>
+            </div>
+            <div class="m-2">
+            <p><%= link_to scan_garments_path do %>
+                    <i class="fas fa-camera"></i>
+                  <% end %></p>
             </div>
          </div>
          </div>
