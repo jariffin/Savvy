@@ -21,7 +21,8 @@
               <%= f.association :brand, collection: Brand.order('name ASC') %>
             </div>
               <div class="col-md-6">
-              <%= f.input :tag, as: :file, label: "Garment Tag" %>
+              <%= f.input :tag, as: :file, label: "Materials Tag" %>
+
               <%= f.input :image, as: :file, label: "Garment Photo" %>
               <br>
             </div>
