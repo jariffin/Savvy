@@ -1,8 +1,9 @@
 .navbar-lewagon {
-  justify-content: space-between;
+  display: flex;
+  justify-content: center;
   background: white;
-  padding-bottom: 25px;
-  padding-top: 25px;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
@@ -16,6 +17,7 @@
   text-decoration: none;
   display: flex;
   margin: 0 auto;
+  padding-left: 30px;
 }
 a:hover {
   color:black;
@@ -25,8 +27,9 @@ a:hover {
   margin-left: -50px;
   color: black;
 }
-.btn.btn-primary {
+.btn.btn-link {
   text-align: right;
   margin-left: -50px;
-  color: black;
+  color: #b8b08d;
+  text-decoration: none;
 }
