@@ -30,3 +30,38 @@
 .card-product .card-product-infos {
   padding: 16px;
 }
+
+// // Smallest device
+// @media (min-width: 100px) and (max-width: 575px) {
+//   .card-product {
+//     width: 1fr;
+//   }
+// }
+
+// // Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) {
+//   .card-product {
+//     width: 1fr;
+//   }
+// }
+
+// // Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) {
+//   .card-product {
+//     width: 2fr;
+//   }
+// }
+
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) {
+//   .card-product {
+//     width: 3fr;
+//   }
+// }
+
+// // Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {
+//   .card-product {
+//     width: 3fr;
+//   }
+// }
