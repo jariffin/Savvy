@@ -1,7 +1,7 @@
 
 <div class="background-cover">
-<div class="container-form mx-auto">
-  <div class="row-form mx-auto">
+<div class="container-form mx-auto justify-content-center">
+  <div class="row-form justify-content-center">
     <div class="col-md-10 my-auto">
       <div class="bg-light py-3 px-5">
         <div class="">
@@ -17,13 +17,10 @@
         <%= simple_form_for (@garment) do |f| %>
           <div class="row">
             <div class="col-md-6">
-              <%= f.input :name, as: :string %>
               <%= f.association :brand, collection: Brand.order('name ASC') %>
             </div>
               <div class="col-md-6">
               <%= f.input :tag, as: :file, label: "Materials Tag" %>
-
-              <%= f.input :image, as: :file, label: "Garment Photo" %>
               <br>
             </div>
           </div>
@@ -34,15 +31,18 @@
             <em> <%= f.error :base %> </em>
           </div>
           <br>
-          <h5 class="text-center">OR manually fill in the materials & percentages:</h5>
-          <br>
+          <div id="revealmanualform">
+            <h5 class="text-center">OR manually fill in the materials & percentages:</h5>
+            <br>
+          </div>
+          <div class="" id="manualform">
             <%= f.simple_fields_for :blends do |blend| %>
               <%= render 'blend_fields', f: blend %>
             <% end %>
             <div class="links">
                   <%= link_to_add_association 'Add material', f, :blends %>
-
             </div>
+          </div>
         <% end %>
         <br>
         <div class="">*stay tuned for our future scanning technology!</div>
@@ -58,11 +58,6 @@
               <p><%= link_to materials_path do %>
                       <i class="fas fa-book-open"></i>
                     <% end %></p>
-            </div>
-            <div class="m-2">
-            <p><%= link_to scan_garments_path do %>
-                    <i class="fas fa-camera"></i>
-                  <% end %></p>
             </div>
          </div>
          </div>
