@@ -1,0 +1,19 @@
+.share p {
+  margin-bottom: 1px;
+}
+
+.links-socialmedia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.links-socialmedia a {
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 4px;
+}
+.links-socialmedia a:hover {
+  color:black;
+  opacity: 1;
+}
