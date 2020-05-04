@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   resources :garments, only: [ :new, :create, :show, :index ] do
     resources :purchases, only: [ :new ]
     resources :blends, only: [ :new, :create ]
+
+    collection do
+      get 'scan'
+    end
   end
 
   resources :purchases, only: [ :index, :destroy ]
