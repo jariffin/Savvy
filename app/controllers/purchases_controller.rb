@@ -4,13 +4,9 @@ class PurchasesController < ApplicationController
   def new
     @purchase = Purchase.new(garment_id: params[:garment_id])
     garment = current_user.purchases.where(garment_id: params[:garment_id])
-    if garment.length > 0
-      flash.alert = "Garment already exists"
-    else
-      @purchase.user = current_user
-      @purchase.save
-      flash.alert = "Garment added to closet!"
-      redirect_to purchases_path
+    @purchase.user = current_user
+    if @purchase.save
+      redirect_to purchases_path, notice:  "Garment successfully added to closet!"
     end
   end
 
