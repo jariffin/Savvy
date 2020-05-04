@@ -1,5 +1,5 @@
 class Garment < ApplicationRecord
-  belongs_to :brand
+  belongs_to :brand, optional: true
 
   has_many :blends
   has_many :materials, through: :blends
