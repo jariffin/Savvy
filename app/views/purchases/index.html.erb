@@ -2,7 +2,7 @@
   <div class="title">
     <h1>MY CLOSET <i class="fas fa-seedling"></i>
     </h1>
-    <h2>Your total ECO-score is <strong><%=@average.round(1)%>%</strong> out of <%= @purchases.count %> items.</h2>
+    <h2>Your total ECO-score is <strong class= "<%= @color %>" ><%=@average.round(1)%>%</strong> out of <%= @purchases.count %> items.</h2>
     <p><%= link_to "Scan an item", new_garment_path, class: "btn btn-primary mt-4" %>
     </p>
     <div class="share">
