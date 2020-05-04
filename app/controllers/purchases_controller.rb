@@ -4,22 +4,24 @@ class PurchasesController < ApplicationController
   def new
     @purchase = Purchase.new(garment_id: params[:garment_id])
     garment = current_user.purchases.where(garment_id: params[:garment_id])
-    if garment.length > 0
-      flash.alert = "Garment already exists"
-    else
-      @purchase.user = current_user
-      @purchase.save
-      flash.alert = "Garment added to closet!"
-      redirect_to purchases_path
+    @purchase.user = current_user
+    if @purchase.save
+      redirect_to purchases_path, notice:  "Garment successfully added to closet!"
     end
   end
-
 
   def index
     # @purchases = current_user.purchases - change when sign in works.
     @purchases = Purchase.all
     percentages = @purchases.map {|purchase| purchase.garment.percentage }
     @average = percentages.sum(0.0) / percentages.size
+    if (@average < 85 && @average > 50)
+      @color = 'yellow'
+    elsif @average < 50
+      @color = 'red'
+    else
+      @color = 'green'
+    end
   end
 
   def destroy
