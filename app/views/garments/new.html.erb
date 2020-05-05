@@ -45,14 +45,16 @@
         <div class="">
           <div class="row mx-auto justify-content-center">
             <div class="m-2">
-              <p><%= link_to purchases_path do %>
+              <p class="button-label my-0 px-2"><%= link_to purchases_path do %>
                       <i class="fas fa-tshirt"></i>
                     <% end %></p>
+                    <span class="button-label-text"><%= link_to "closet", purchases_path %></span>
             </div>
             <div class="m-2">
-              <p><%= link_to materials_path do %>
+              <p class="button-label my-0 px-2">  <%= link_to materials_path do %>
                       <i class="fas fa-book-open"></i>
                     <% end %></p>
+                    <span class="button-label-text"><%= link_to "materials", materials_path %></span>
             </div>
          </div>
          </div>
