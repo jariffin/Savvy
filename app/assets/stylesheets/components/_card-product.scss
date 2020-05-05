@@ -1,7 +1,7 @@
 
 .card-product {
   overflow-y: scroll;
-  max-height: 240px;
+  max-height: grow;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -27,7 +27,6 @@
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
-  overflow: scroll;
 }
 
 .card-product .card-product-infos {
@@ -49,3 +48,29 @@
 }
 
 
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .card-product {
+  display: inline-block;
+  }
+  .card-product img {
+  width: 100%;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
