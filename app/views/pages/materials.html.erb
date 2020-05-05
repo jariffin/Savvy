@@ -170,7 +170,7 @@
             <img src="https://images.unsplash.com/photo-1502395809857-fd80069897d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
               <div class="card-product-infos">
               <h2>Cotton</h2>
-                 <p>Cotton is extremely versatile. However only 30% is grown using rainwater, the rest relies on irrigation (1 shirt requires up to 2,700 litres of water), causing environmental disasters like the <%= link_to "shrinkage of the Aral Sea.", "https://www.theguardian.com/sustainable-business/sustainable-fashion-blog/2014/oct/01/cotton-production-linked-to-images-of-the-dried-up-aral-sea-basin" %> Production also requires heavy use of pesticides and chemicals, and/or GM-crop, all of which contributes to heavy debt linked to <%= link_to "farmer suicides in India", "https://www.theguardian.com/global-development/gallery/2014/may/05/india-cotton-suicides-farmer-deaths-gm-seeds" %>. Long term cultivation causes erosion and depletes soil nutrients, resulting in further encroachment into habitats. In addition, most of the world's cotton is grown in developing countries where environmental laws are not heavily enforced. Read more about cotton's impact <%= link_to "here", "https://www.tortoiseandladygrey.com/2014/09/01/textile-review-the-environmental-impacts-of-cotton/" %> and <%= link_to "here", "https://www.worldwildlife.org/industries/cotton" %>.</p>
+                 <p>Cotton is extremely versatile. However only 30% is grown using rainwater, the rest relies on irrigation (1 shirt requires up to 2,700 litres of water), causing environmental disasters like the <%= link_to "shrinkage of the Aral Sea.", "https://www.theguardian.com/sustainable-business/sustainable-fashion-blog/2014/oct/01/cotton-production-linked-to-images-of-the-dried-up-aral-sea-basin", :target => "_blank" %> Production also requires heavy use of pesticides and chemicals, and/or GM-crop, all of which contributes to heavy debt linked to <%= link_to "farmer suicides in India", "https://www.theguardian.com/global-development/gallery/2014/may/05/india-cotton-suicides-farmer-deaths-gm-seeds", :target => "_blank" %>. Long term cultivation causes erosion and depletes soil nutrients, resulting in further encroachment into habitats. In addition, most of the world's cotton is grown in developing countries where environmental laws are not heavily enforced. Read more about cotton's impact <%= link_to "here", "https://www.tortoiseandladygrey.com/2014/09/01/textile-review-the-environmental-impacts-of-cotton/", :target => "_blank" %> and <%= link_to "here", "https://www.worldwildlife.org/industries/cotton" %>.</p>
               <div class="rating">
                 <div><p><em>&#8226; water-intensive, social & environmental impact</em></p></div>
                 <div><strong>Rating: B-</strong></div>
@@ -201,7 +201,7 @@
             <img src="https://images.unsplash.com/photo-1484557985045-edf25e08da73?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
               <div class="card-product-infos">
               <h2>Wool/Cashmere/Alpaca/Mohair</h2>
-              <p>Animal fibers like wool, cashmere, alpaca and mohair and angora are quite sustainable and don't involve killing of the animals. However, there has been reports by animal rights activists in Australia of shearers kicking, punching and killing the animals while shearing, as well as eports of animal cruelty in China, the largest producer of Angora wool from rabbits. Non-organic farming of animals may also involve anti-tick with harmful chemicals. Where possible, buy local or free-trade wool to avoid these issues. Kept carefully, woolen clothes will endure much longer than cotton garments.</p>
+              <p>Animal fibers like wool, cashmere, alpaca and mohair and angora are quite sustainable and don't involve killing of the animals. However, there has been <%= link_to "reports", "https://investigations.peta.org/australian-wool-industry-cruelty/", :target => "_blank" %> by animal rights activists in Australia of shearers kicking, punching and killing the animals while shearing, as well as reports of animal cruelty in China, the largest producer of Angora wool from rabbits. Non-organic farming of animals may also involve anti-tick with harmful chemicals. Where possible, buy local or free-trade wool to avoid these issues. Kept carefully, woolen clothes will endure much longer than cotton garments.</p>
               <div class="rating">
                 <div><p><em>&#8226; animal-based, animal-cruelty, biodegradable</em></p></div>
                 <div><strong>Rating: B+</strong></div>
@@ -218,18 +218,43 @@
             <img src="https://images.pexels.com/photos/2933636/pexels-photo-2933636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
               <div class="card-product-infos">
               <h2>Silk</h2>
-              <p>.</p>
+              <p>Silk is produced by silkworms fed with mulberry leaves. Growing mulberry requires pesticides and fertilizer, and chemicals are also used during the production of silk. Nevertheless, far less chemicals are needed compared to cotton. Silk is often obtained from the worms by boiling the chrysalis, thereby killing the insects, however peace silk is harvested after the moths emerge, avoiding animal cruelty. Although many silk garments are marked "Dry Clean Only", you should handwash silk as dry-cleaning releases a lot of pollutants and is not necessary to preserve silk, which is a long-lasting and classically stylish fabric.</p>
               <div class="rating">
-                <div><p><em>&#8226; deforestation</em></p></div>
-                <div><strong>Rating: B-</strong></div>
+                <div><p><em>&#8226; possible animal cruelty</em></p></div>
+                <div><strong>Rating: A/B+</strong></div>
               </div>
             </div>
           </div>
         </div>
         <br>
-        <div class="material_silk"></div>
-        <div class="material_ramie"></div>
-        <div class="material_down"></div>
+        <div class="material_ramie" id="ramie">
+          <div class="card-product">
+            <img src="https://images.unsplash.com/photo-1531387906034-2be913531bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+              <div class="card-product-infos">
+              <h2>Ramie</h2>
+              <p>Like linen, ramie is an ancient fabric, dating back to Ancient Egypt where it might have been used to wrap mummies. The ramie plant is mostly grown in China, Brazil, the Philippines, and India. Ramie is naturally rot and insect resistant (does not require pesticides), and can be harvested up to 6 times per year. Nevertheless, producing the fibers is costly and labor intensive, and the fibers are treated with chemicals during production. Ramie fibers are very strong (even stronger when wet), but are not as durable as other fibers, so ramie is usually blended with cotton or wool. In addition, ramie dyes easily, is crease-resistant, and as smooth as silk.</p>
+              <div class="rating">
+                <div><p><em></em></p></div>
+                <div><strong>Rating: B</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="material_down" id="down">
+          <div class="card-product">
+            <img src="https://images.unsplash.com/photo-1514829560620-c510997c9c41?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+              <div class="card-product-infos">
+              <h2>Feather Down</h2>
+              <p>Eiderdown is very expensive and hand-collected after being shed by eider geese. However most down comes from geese, and is a byproduct of livestock farming that would otherwise be thrown away. Ethical concerns come from the practice of <%= link_to "live-plucking", "https://www.theguardian.com/world/2016/jan/14/winter-coat-ethically-produced-down-goose-feathers", :target => "_blank" %>, which can be done several times a year until the goose is slaughtered. Live-plucking is banned in the U.S and some European countries, but still occurs in some Eastern European countries and China. The alternative is synthetic filling in your blankets, which we do not recommend either. Therefore, look for ethical real down, or recycled real down for a more sustainable choice.</p>
+              <div class="rating">
+                <div><p><em>&#8226; animal-cruelty</em></p></div>
+                <div><strong>Rating: B</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
       </div>
       <div class="c_materials py-3">
         <div class="text-center py-3">
@@ -238,29 +263,38 @@
               <p><em>We classify these materials as those that <strong>harm our environment and health</strong> during production, use, and after being discarded. These fabrics may be cheap to produce and buy, but the price we pay from polluted seas, suffering animals, and toxic food is much to high for us to pay!</em></p>
             </div>
         </div>
+        <div class="material_leather" id="leather">
          <div class="material_leather">
           <div class="card-product">
             <img src="https://images.unsplash.com/photo-1473188588951-666fce8e7c68?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"/>
-            <div class="card-product-infos">
-              <h2>Leather</h2>
-              <p>We'll be the first to admit, leather looks awesome. But non-eco friendly leather results in: methane emissions (livestock); deforestation; toxic chemicals from tanning (carcinogenic chromium, lead, arsenic and acids); polluted waterways. Tannery workers suffer from cancer, kidney and liver damage, and reproductive problems. Sustainable leather is a possibility, but leather alternatives derived from pineapples, grapes, mushrooms or seaweed are better!</p>
-              <div class="rating">
-                <div><p><em>&#8226; animal-based</em></p></div>
-                <div><strong>Rating: B</strong></div>
+              <div class="card-product-infos">
+                <h2>Leather</h2>
+                <p>We'll be the first to admit, leather looks awesome. But non-eco friendly leather results in: methane emissions (livestock); deforestation; toxic chemicals from tanning (carcinogenic chromium, lead, arsenic and acids); polluted waterways. Tannery workers suffer from cancer, kidney and liver damage, and reproductive problems. Sustainable leather is a possibility, but leather alternatives derived from pineapples, grapes, mushrooms or seaweed are better!</p>
+                <div class="rating">
+                  <div><p><em>&#8226; animal-based, animal-cruelty</em></p></div>
+                  <div><strong>Rating: B</strong></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <br>
-        <div class="material_flax">
+        <div class="material_polyester" id="polyester">
+         <div class="material_polyester">
           <div class="card-product">
-             <div class="">
-              <h3>      More fabric descriptions coming soon...</h3>
+            <img src="https://images.unsplash.com/photo-1554103494-90f9e0883a85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"/>
+              <div class="card-product-infos">
+                <h2>Polyester</h2>
+                <p></p>
+                <div class="rating">
+                  <div><p><em>&#8226; animal-based, animal-cruelty</em></p></div>
+                  <div><strong>Rating: B</strong></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="material_fur"></div>
-
+        <br>
         https://images.pexels.com/photos/1420710/pexels-photo-1420710.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500
 
         <div class="material_polyester"></div>
@@ -279,28 +313,34 @@
       <div class="card-description">
         <h1 class="text-center py-3">References</h1>
         <br>
-        <p>Images are from <%= link_to "Unsplash", "https://unsplash.com/" %> and <%= link_to "Pexel", "https://pexel.com/" %></p>
-        <p><%= link_to "1) Good On You", "https://goodonyou.eco/" %></p>
-        <p><%= link_to "2) Better Meets Reality", "https://www.bettermeetsreality.com/" %></p>
-        <p><%= link_to "3) Catwalk Yourself", "http://www.catwalkyourself.com/" %></p>
-        <p><%= link_to "4) Tortoise & Lady Grey", "https://www.tortoiseandladygrey.com/" %></p>
-        <p><%= link_to "5) The Sustainable Fashion Collective", "https://www.the-sustainable-fashion-collective.com/" %></p>
-        <p><%= link_to "6) Common Objective (CO)", "https://www.commonobjective.co/article/fibre-briefing-cotton" %></p>
-        <p><%= link_to "7) WWF", "https://www.worldwildlife.org/i" %></p>
+        <p>Images are from <%= link_to "Unsplash", "https://unsplash.com/", :target => "_blank" %> and <%= link_to "Pexel", "https://pexel.com/" %></p>
+        <p><%= link_to "1) Good On You", "https://goodonyou.eco/", :target => "_blank" %></p>
+        <p><%= link_to "2) Better Meets Reality", "https://www.bettermeetsreality.com/", :target => "_blank" %></p>
+        <p><%= link_to "3) Catwalk Yourself", "http://www.catwalkyourself.com/", :target => "_blank" %></p>
+        <p><%= link_to "4) Tortoise & Lady Grey", "https://www.tortoiseandladygrey.com/", :target => "_blank" %></p>
+        <p><%= link_to "5) The Sustainable Fashion Collective", "https://www.the-sustainable-fashion-collective.com/", :target => "_blank" %></p>
+        <p><%= link_to "6) Common Objective (CO)", "https://www.commonobjective.co/article/fibre-briefing-cotton", :target => "_blank" %></p>
+        <p><%= link_to "7) WWF", "https://www.worldwildlife.org/", :target => "_blank" %></p>
+        <p><%= link_to "8) fibre2fashion", "https://www.fibre2fashion.com/", :target => "_blank" %></p>
+        <p><%= link_to "9) Ecocult", "https://ecocult.com/can-feather-down-be-ethical-and-eco-friendly/", :target => "_blank" %></p>
+
       </div>
       <br>
-        <div class="row mx-auto justify-content-center">
-          <div class="m-2">
-            <p><%= link_to purchases_path do %>
-                    <i class="fas fa-tshirt"></i>
-                  <% end %></p>
-          </div>
-          <div class="m-2">
-          <p><%= link_to new_garment_path do %>
-                  <i class="fas fa-camera"></i>
+
+      <div class="row mx-auto justify-content-center">
+        <div class="m-2">
+          <p class="button-label my-0 px-2"><%= link_to purchases_path do %>
+                  <i class="fas fa-tshirt"></i>
                 <% end %></p>
-          </div>
+                <span class="button-label-text"><%= link_to "closet", purchases_path %></span>
         </div>
+        <div class="m-2">
+          <p class="button-label my-0 px-2">  <%= link_to materials_path do %>
+                  <i class="fas fa-book-open"></i>
+                <% end %></p>
+                <span class="button-label-text"><%= link_to "materials", materials_path %></span>
+        </div>
+      </div>
     </div>
   </div>
 </div>
