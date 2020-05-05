@@ -2,38 +2,41 @@
   <div class="row-container px-5 py-3">
     <div class="py-3">
       <div class="text-center py-3">
-        <h1>Computing the ECO-Score</h1>
+        <h1>Behind the ECO-Score</h1>
         <div class="py-3">
           <p>Some fancy text about the ECO-Score</p>
         </div>
       </div>
-      <div class="">
+      <div class="good">
         <div class="card-product">
-          <div class="card-product-infos">
+          <div class="card-product-information">
             <h2>85 - 100</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati voluptatum, similique velit adipisci perferendis sequi magni ipsa id! Deserunt vel natus praesentium magni nobis itaque ipsum magnam porro dolor tenetur.</p>
           </div>
         </div>
       </div>
       <br>
-      <div class="">
+      <div class="bad">
         <div class="card-product">
-          <div class="card-product-infos">
+          <div class="card-product-information">
             <h2>50 - 84</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam libero alias molestias dignissimos ratione consequuntur soluta, pariatur eveniet culpa suscipit corporis voluptas laborum, commodi dolorem enim eum ducimus recusandae sunt.</p>
           </div>
         </div>
       </div>
       <br>
-      <div class="">
+      <div class="ugly">
         <div class="card-product">
-          <div class="card-product-infos">
+          <div class="card-product-information">
             <h2>0 - 49</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus dicta, ducimus nam alias debitis earum pariatur est, adipisci quas nemo accusantium dolore aspernatur sunt. Blanditiis eligendi alias assumenda eius amet.</p>
           </div>
         </div>
       </div>
     </div>
+    <div class="page-buttons">
+    <p><%= link_to "Go back to Closet", purchases_path, class: "btn btn-light mt-4" %>
+    <%= link_to "Go to Materials", materials_path, class: "btn btn-light mt-4" %></p>
+    </div>
   </div>
 </div>
-
