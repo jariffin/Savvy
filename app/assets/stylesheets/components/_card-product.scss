@@ -59,8 +59,13 @@
 }
 
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-
+@media (min-width: 575px) and (max-width: 1004px) {
+    .card-product {
+  display: inline-block;
+  }
+  .card-product img {
+  width: 100%;
+  }
 }
 
 // Medium devices (tablets, 768px and up)
