@@ -17,7 +17,8 @@ class GarmentsController < ApplicationController
     else
       if @garment.save
         redirect_to garment_path(@garment)
-      else
+      else params[:garment].nil?
+        flash.alert = "Please fill in the form."
         render :new
       end
     end
@@ -35,7 +36,7 @@ class GarmentsController < ApplicationController
   private
 
   def garments_params
-    params.require(:garment).permit(:name, :brand_id, :image, :tag, blends_attributes: [:material_id, :percentage_material, :id, :_destroy])
+    params.require(:garment).permit(:tag, blends_attributes: [:material_id, :percentage_material, :id, :_destroy])
   end
 
 end
