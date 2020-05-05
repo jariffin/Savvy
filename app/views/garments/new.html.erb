@@ -26,10 +26,11 @@
             <em> <%= f.error :base %> </em>
           </div>
           <br>
+          <div id="revealmanualform">
             <h5 class="text-center">OR manually enter materials & percentages:</h5>
             <br>
-
-          <div class="div-material">
+          </div>
+          <div class="" id="manualform">
             <%= f.simple_fields_for :blends do |blend| %>
               <%= render 'blend_fields', f: blend %>
             <% end %>
@@ -38,24 +39,20 @@
             </div>
           </div>
           <br>
-          <br>
           <%= f.button :submit, 'Calculate the ECO-score!', class: "btn btn-dark btn-block" %>
         <% end %>
         <br>
         <div class="">
           <div class="row mx-auto justify-content-center">
             <div class="m-2">
-
-              <p class="button-label my-0 px-2"><%= link_to purchases_path do %>
+              <p><%= link_to purchases_path do %>
                       <i class="fas fa-tshirt"></i>
                     <% end %></p>
-                    <span class="button-label-text"><%= link_to "closet", purchases_path %></span>
             </div>
             <div class="m-2">
-              <p class="button-label my-0 px-2">  <%= link_to materials_path do %>
+              <p><%= link_to materials_path do %>
                       <i class="fas fa-book-open"></i>
                     <% end %></p>
-                    <span class="button-label-text"><%= link_to "materials", materials_path %></span>
             </div>
          </div>
          </div>
