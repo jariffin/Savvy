@@ -26,11 +26,10 @@
             <em> <%= f.error :base %> </em>
           </div>
           <br>
-          <div id="revealmanualform">
             <h5 class="text-center">OR manually enter materials & percentages:</h5>
             <br>
-          </div>
-          <div class="div-material" id="manualform">
+
+          <div class="div-material">
             <%= f.simple_fields_for :blends do |blend| %>
               <%= render 'blend_fields', f: blend %>
             <% end %>
