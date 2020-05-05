@@ -6,7 +6,7 @@ class Garment < ApplicationRecord
   has_one_attached :image
   has_one_attached :tag
 
-  validates :materials, presence: true
+#  validates :materials, presence: true
   validate :max_percentage_has_not_been_reached
 
   accepts_nested_attributes_for :blends, reject_if: :all_blank, allow_destroy: true
