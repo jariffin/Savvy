@@ -1,6 +1,8 @@
+
 .card-product {
-  overflow: hidden;
-  height: 200px;
+  overflow: grow;
+  height: grow;
+  max-height: grow;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -8,8 +10,8 @@
 }
 
 .card-product img {
-  height: 100%;
-  width: 200px;
+  height: 240px;
+  width: 240px;
   object-fit: cover;
 }
 
@@ -31,3 +33,18 @@
   padding: 16px;
 }
 
+.rating {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.card-description {
+  overflow: hidden;
+  height: grow;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  align-items: left;
+  padding: 8px;
+}
