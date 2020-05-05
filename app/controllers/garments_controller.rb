@@ -32,16 +32,12 @@ class GarmentsController < ApplicationController
   end
 
   def update
-   @garment = Garment.new(garments_params)
-    if current_user.nil?
-      redirect_to new_user_session_path
-    else @garment.user_id = current_user.id
-      if @garment.update(garments_params)
-        #redirect to new purchase
-        redirect_to purchases_path, notice:  "Garment successfully added to closet!"
-      else
-        render :edit
-      end
+    @garment = Garment.find(params[:id])
+    if @garment.update(garments_params)
+      #redirect to new purchase
+      redirect_to new_garment_purchase_path(@garment)
+    else
+      flash.alert = "Cannot update"
     end
   end
 
