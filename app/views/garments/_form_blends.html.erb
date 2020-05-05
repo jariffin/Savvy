@@ -1,0 +1,6 @@
+  <%= f.simple_fields_for :blends do |blend| %>
+    <%= render 'blend_fields', f: blend %>
+  <% end %>
+  <div class="links">
+        <%= link_to_add_association 'Add material', f, :blends %>
+  </div>
