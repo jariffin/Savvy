@@ -1,7 +1,7 @@
 
 <div class="background-cover">
-<div class="container-form mx-auto">
-  <div class="row-form mx-auto">
+<div class="container-form mx-auto justify-content-center">
+  <div class="row-form justify-content-center">
     <div class="col-md-10 my-auto">
       <div class="bg-light py-3 px-5">
         <div class="">
@@ -13,39 +13,34 @@
           </div>
         <% end %>
         <br>
-
         <%= simple_form_for (@garment) do |f| %>
-          <div class="row">
-            <div class="col-md-6">
-              <%= f.input :name, as: :string %>
-              <%= f.association :brand, collection: Brand.order('name ASC') %>
-            </div>
+          <div class="row justify-content-center">
               <div class="col-md-6">
-              <%= f.input :tag, as: :file, label: "Materials Tag" %>
-
-              <%= f.input :image, as: :file, label: "Garment Photo" %>
+              <%= f.input :tag, as: :file, label: false %>
               <br>
             </div>
           </div>
-          <br>
-          <%= f.button :submit, 'Calculate the ECO-score!', class: "btn btn-dark btn-block" %>
+          <%= f.button :submit, 'Scan the materials tag', class: "btn btn-dark btn-block" %>
           <br>
           <div class="bg-warning text-center">
             <em> <%= f.error :base %> </em>
           </div>
           <br>
-          <h5 class="text-center">OR manually fill in the materials & percentages:</h5>
-          <br>
+          <div id="revealmanualform">
+            <h5 class="text-center">OR manually enter materials & percentages:</h5>
+            <br>
+          </div>
+          <div class="" id="manualform">
             <%= f.simple_fields_for :blends do |blend| %>
               <%= render 'blend_fields', f: blend %>
             <% end %>
             <div class="links">
                   <%= link_to_add_association 'Add material', f, :blends %>
-
             </div>
+          </div>
+          <br>
+          <%= f.button :submit, 'Calculate the ECO-score!', class: "btn btn-dark btn-block" %>
         <% end %>
-        <br>
-        <div class="">*stay tuned for our future scanning technology!</div>
         <br>
         <div class="">
           <div class="row mx-auto justify-content-center">

@@ -6,7 +6,7 @@
     <h1 class= "<%= @garment.percent_color %>"> <%= @garment_rating%>%</h1>
     <h5><%= link_to 'Materials', materials_path %></h5>
     <% @garment.blends.each do |blend| %>
-    <p class="material"><em><%= blend.percentage_material %>% <%= blend.material.name %></em></p>
+    <p class="material"><em><%= blend.percentage_material %>% <%= link_to "#{blend.material.name}", materials_path(anchor: "#{blend.material.name.downcase}")%></em></p>
     <% end %>
     <div class="ruler d-flex justify-content-around">
       <div class="box">
@@ -24,14 +24,16 @@
     </div>
  </div>
   <div class="rating-box col-md-5 container center-align shadow text-center">
-
-    <p>Do you own this <%= @garment.name %>? Add to your closet to keep track of your ECO-rating!</p>
-    <p class="button-text"><%= link_to '<i class="fas fa-plus"></i>'.html_safe, new_garment_purchase_path(@garment)%></p>
-    <p>scan another</p>
+    <% if !user_signed_in? || !current_user.purchases.map(&:garment_id).include?(@garment.id)%>
+      <p>Do you own this <%= @garment.name %>? Add to your closet to keep track of your ECO-rating!</p>
+      <p class="button-text"><%= link_to '<i class="fas fa-plus"></i>'.html_safe, new_garment_purchase_path(@garment)%></p>
+    <% end %>
+  <p>scan another garment</p>
     <p class="button-text"><%= link_to '<i class="fas fa-redo-alt"></i>'.html_safe, new_garment_path %></p>
     <div>
       <%= link_to "Visit closet", purchases_path, class: "closet-btn btn btn-primary mt-3 align" %>
     </div>
+     <p><%= flash[:alert]%></p>
     </div>
   </div>
 </div>
