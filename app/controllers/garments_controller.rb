@@ -10,10 +10,15 @@ class GarmentsController < ApplicationController
     @brand = Brand.new
     @garment = Garment.new(garments_params)
     if @garment.blends.length.zero?
-      tag_text = RTesseract.new(params[:garment][:tag].tempfile.path).to_s
-      @garment.tag_text = tag_text
-      @garment.tag_text_to_blends
-      render :new
+        if params[:one].nil?
+          render :new
+          flash.alert = "Please scan tag/input materials"
+        else
+        tag_text = RTesseract.new(params[:garment][:tag].tempfile.path).to_s
+        @garment.tag_text = tag_text
+        @garment.tag_text_to_blends
+        render :new
+        end
     elsif
       @garment.save
       redirect_to garment_path(@garment)
