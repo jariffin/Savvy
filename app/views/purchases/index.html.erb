@@ -24,13 +24,17 @@
           <%= link_to garment_path(purchase.garment) do %>
           <div class="card-text">
             <div class="card-title">
-              <h3><strong><%= purchase.garment.name %></strong></h3>
+             <% if !purchase.garment.name.nil?  %>
+                <h3><strong><%= purchase.garment.name %></strong></h3>
+              <% end %>
             </div>
             <div class="card-info-1">
               <p> ECO-rating: <%=purchase.garment.percentage%>%</p>
             </div>
             <div class="card-info-2">
-              <p> Brand: <%= purchase.garment.brand.name %> </p>
+              <% if !purchase.garment.brand.nil?  %>
+                <p> Brand: <%= purchase.garment.brand.name %> </p>
+              <% end %>
             </div>
             <div class="btn-delete">
               <%= link_to purchase_path(purchase),

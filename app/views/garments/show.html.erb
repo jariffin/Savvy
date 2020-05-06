@@ -22,19 +22,34 @@
         <p>Excellent choice!</p>
       </div>
     </div>
- </div>
-  <div class="rating-box col-md-5 container center-align shadow text-center">
     <% if !user_signed_in? || !current_user.purchases.map(&:garment_id).include?(@garment.id)%>
-      <p>Do you own this <%= @garment.name %>? Add to your closet to keep track of your ECO-rating!</p>
-      <p class="button-text"><%= link_to '<i class="fas fa-plus"></i>'.html_safe, new_garment_purchase_path(@garment)%></p>
+    <br>
+    <hr class="solid">
+    <p>Do you own this <%= @garment.name %>? Add to your closet to keep track of your ECO-rating!</p>
+         <div class="form-container">
+      <%= simple_form_for @garment do |f| %>
+        <%= f.input :name, label: "Name of garment" %>
+              <div class="">
+        <%= f.association :brand, collection: Brand.order('name ASC') %>
+          </div>
+        <%= f.input :image, as: :file, label: "Image of garment" %>
+      </div>
+        <%= f.button :submit, "Add garment to closet", class: "btn btn-primary mt-4" %>
+      <% end %>
     <% end %>
-  <p>scan another garment</p>
-    <p class="button-text"><%= link_to '<i class="fas fa-redo-alt"></i>'.html_safe, new_garment_path %></p>
-    <div>
-      <%= link_to "Visit closet", purchases_path, class: "closet-btn btn btn-primary mt-3 align" %>
+    <hr class="solid">
+  <div class="buttons-container d-flex justify-content-start">
+      <div class="buttons-box col">
+        <p class="button-icon"><%= link_to '<i class="fas fa-redo-alt"></i>'.html_safe, new_garment_path %></p>
+        <p>scan another garment</p>
+      </div>
+      <div class="buttons-box col">
+      <p class="button-icon"><%= link_to '<i class="fas fa-tshirt"></i>'.html_safe, purchases_path %></p>
+      <p>Closet</p>
+      </div>
     </div>
+
      <p><%= flash[:alert]%></p>
-    </div>
+
   </div>
 </div>
-

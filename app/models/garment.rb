@@ -6,7 +6,7 @@ class Garment < ApplicationRecord
   has_one_attached :image
   has_one_attached :tag
 
-  # validates :name, presence: true
+#  validates :materials, presence: true
   validate :max_percentage_has_not_been_reached
 
   accepts_nested_attributes_for :blends, reject_if: :all_blank, allow_destroy: true
@@ -66,9 +66,9 @@ class Garment < ApplicationRecord
   end
 
   def slogan
-    positive_slogan = ['Great choice!', 'GO ECO!', 'Perfect!', 'Welcome to the ECO club!', 'Small ecological footprint, and a giant leap for mankind!']
-    neuteral_slogan = ['I can see you are trying!', 'Continue this way to break the ECO barrier in your life']
-    negative_slogan = ['Seriously?!', 'Maybe you will look for something better?', 'Don\'t tell me you want to buy that..', 'Not approved by ECO team', 'Welcome to the dark side!']
+    positive_slogan = ['Great choice!', 'GO ECO!', 'Perfect!', 'Go GREEN!', 'Welcome to the ECO club!', 'Small ecological footprint, and a giant leap for mankind!']
+    neuteral_slogan = ['I can see you are trying!', 'No one succeeds without effort.', 'You can do anything if you set your mind to it. Keep trying!', 'It does not matter how slowly you go as long as you do not stop.', 'Continue this way to break the ECO barrier in your life']
+    negative_slogan = ['Seriously?!', 'Failure is only the opportunity to begin again', 'Maybe you will look for something better?', 'Don\'t tell me you want to buy that..', 'Not approved by ECO team', 'Welcome to the dark side!']
     if percent_color == 'green'
       positive_slogan.sample
     elsif percent_color == 'yellow'

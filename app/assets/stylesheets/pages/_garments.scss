@@ -2,6 +2,7 @@
   background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)), url("https://images.unsplash.com/photo-1519356162333-4d49ceade668");
   background-size: cover;
   background-position: cover;
+  min-height: 100vh;
 }
 
 .results {
@@ -17,8 +18,26 @@
     margin-left: 0px;
 }
 
+.buttons-container {
+  display: flex;
+}
+
+.form-container {
+  text-align: left;
+}
+
+.buttons-box p {
+  font-size: 10px;
+  margin-bottom: 0px;
+}
+
+.buttons-box .button-icon {
+  font-size: 25px;
+}
+
 #slogan {
   color: #808080;
   font-family: Damion;
   font-size: 24px;
 }
+
