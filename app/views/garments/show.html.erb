@@ -32,9 +32,9 @@
               <div class="">
         <%= f.association :brand, collection: Brand.order('name ASC') %>
           </div>
-        <%= f.input :image, as: :file, label: "Image of garment" %>
+        <%= f.input :image, as: :file, label: "Image of garment (optional)" %>
       </div>
-        <%= f.button :submit, "Add garment to closet", class: "btn btn-primary mt-4" %>
+        <%= f.button :submit, "Add garment to closet", class: "btn btn-dark mt-4" %>
       <% end %>
     <% end %>
     <hr class="solid">
