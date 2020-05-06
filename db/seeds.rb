@@ -155,7 +155,7 @@ create_blend(cotton, shirt, 100)
 shirt.save!
 
 file_5 = URI.open("https://images.pexels.com/photos/2146344/pexels-photo-2146344.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260")
-linen_coat = Garment.new(name: "Linen Coat", brand_id: uniqlo.id)
+linen_coat = Garment.new(name: "Linen coat", brand_id: uniqlo.id)
 linen_coat.image.attach(io: file_5, filename: "image.jpeg", content_type: "image/jpeg")
 create_blend(cotton, linen_coat, 50)
 create_blend(linen, linen_coat, 50)
