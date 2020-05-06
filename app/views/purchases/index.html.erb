@@ -24,7 +24,9 @@
           <%= link_to garment_path(purchase.garment) do %>
           <div class="card-text">
             <div class="card-title">
-              <h3><strong><%= purchase.garment.name %></strong></h3>
+             <% if !purchase.garment.name.nil?  %>
+                <h3><strong><%= purchase.garment.name %></strong></h3>
+              <% end %>
             </div>
             <div class="card-info-1">
               <p> ECO-rating: <%=purchase.garment.percentage%>%</p>
