@@ -20,7 +20,7 @@
     <div class="container" style="background-image: url('<%= cl_image_path("https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-1.2.1&auto=format&fit=crop&w=1055&q=80") %>')">
       <div class="cards">
         <% @purchases.each do |purchase| %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('<%= cl_image_path(purchase.garment.image.key, width: 300, height: 400, crop: :fill) if purchase.garment.image.attached? %>')">
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('<%= cl_image_path(purchase.default_picture, width: 300, height: 400, crop: :fill)%>')">
           <%= link_to garment_path(purchase.garment) do %>
           <div class="card-text">
             <div class="card-title">
