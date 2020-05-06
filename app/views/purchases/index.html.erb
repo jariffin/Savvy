@@ -30,7 +30,9 @@
               <p> ECO-rating: <%=purchase.garment.percentage%>%</p>
             </div>
             <div class="card-info-2">
-              <p> Brand: <%= purchase.garment.brand.name %> </p>
+              <% if !purchase.garment.brand.nil?  %>
+                <p> Brand: <%= purchase.garment.brand.name %> </p>
+              <% end %>
             </div>
             <div class="btn-delete">
               <%= link_to purchase_path(purchase),
