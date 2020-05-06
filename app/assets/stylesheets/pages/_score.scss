@@ -39,6 +39,7 @@
 
 .page-buttons p {
   text-align: center;
+  opacity: 0.9;
 }
 .improve ul {
   max-width: 520px;
@@ -47,8 +48,9 @@
   font-weight: bold;
   margin-right: auto;
   margin-left: auto;
+
 }
 
-.fa-leaf {
-  color: #32CD32;
+.improve .fa-seedling {
+  color: black;
 }
