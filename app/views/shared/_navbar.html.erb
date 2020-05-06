@@ -4,7 +4,7 @@
     <% if user_signed_in? %>
       <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "btn btn-link") %>
     <% else %>
-      <a href="users/sign_in"><i class="far fa-user"></i></a>
+      <a href="/users/sign_in"><i class="far fa-user"></i></a>
     <% end %>
 </div>
 
