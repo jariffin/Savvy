@@ -10,6 +10,7 @@ class GarmentsController < ApplicationController
     @brand = Brand.new
     @garment = Garment.new(garments_params)
     if @garment.blends.length.zero? && !params[:garment][:tag].nil?
+      # @garment.tag = params[:garment][:tag]
       tag_text = RTesseract.new(params[:garment][:tag].tempfile.path).to_s
       @garment.tag_text = tag_text
       @garment.tag_text_to_blends

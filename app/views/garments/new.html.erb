@@ -20,6 +20,11 @@
               <br>
             </div>
           </div>
+          <br>
+          <div class="garment-tag text-center">
+            <%= cl_image_path(@garment.tag) if @garment.tag.attached? %>
+          </div>
+          <br>
           <%= f.button :submit, 'Scan the materials tag', class: "btn btn-dark btn-block" %>
           <br>
           <div class="bg-warning text-center">
