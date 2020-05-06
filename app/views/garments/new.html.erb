@@ -30,7 +30,7 @@
             <h5 class="text-center">OR manually enter materials & percentages:</h5>
             <br>
           </div>
-          <div class="div-material" id="manualform">
+          <div class="" id="manualform">
             <%= f.simple_fields_for :blends do |blend| %>
               <%= render 'blend_fields', f: blend %>
             <% end %>
@@ -38,7 +38,6 @@
                   <%= link_to_add_association 'Add material', f, :blends %>
             </div>
           </div>
-          <br>
           <br>
           <%= f.button :submit, 'Calculate the ECO-score!', class: "btn btn-dark btn-block" %>
         <% end %>
