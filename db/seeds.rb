@@ -57,6 +57,8 @@ cotton = Material.create!(name: "Cotton", synthetic: false, material_rating: 7)
 modal = Material.create!(name: "Modal", synthetic: false, material_rating: 7)
 wool = Material.create!(name: "Wool", synthetic: false, material_rating: 7)
 cashmere = Material.create!(name: "Cashmere", synthetic: false, material_rating: 7)
+alpaca = Material.create!(name: "Alpaca", synthetic: false, material_rating: 7)
+mohair = Material.create!(name: "Mohair", synthetic: false, material_rating: 7)
 silk = Material.create!(name: "Silk", synthetic: false, material_rating: 7)
 ramie = Material.create!(name: "Ramie", synthetic: false, material_rating: 7)
 down = Material.create!(name: "Down", synthetic: false, material_rating: 7)
@@ -191,15 +193,15 @@ dress2.save!
 
 puts "Creating Purchases..."
 
-Purchase.create!(garment_id: jeans.id, user_id: sandy.id)
-Purchase.create!(garment_id: dress.id, user_id: sandy.id)
-Purchase.create!(garment_id: pants.id, user_id: sandy.id)
-Purchase.create!(garment_id: shirt.id, user_id: sandy.id)
-Purchase.create!(garment_id: linen_coat.id, user_id: sandy.id)
 Purchase.create!(garment_id: jeans2.id, user_id: sandy.id)
 Purchase.create!(garment_id: dress2.id, user_id: sandy.id)
 Purchase.create!(garment_id: sweater.id, user_id: sandy.id)
 Purchase.create!(garment_id: socks.id, user_id: sandy.id)
+Purchase.create!(garment_id: pants.id, user_id: sandy.id)
+Purchase.create!(garment_id: shirt.id, user_id: sandy.id)
+Purchase.create!(garment_id: linen_coat.id, user_id: sandy.id)
+Purchase.create!(garment_id: dress.id, user_id: sandy.id)
+Purchase.create!(garment_id: jeans.id, user_id: sandy.id)
 
 puts "Done!"
 

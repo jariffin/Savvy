@@ -28,6 +28,7 @@
     <p>Do you own this <%= @garment.name %>? Add to your closet to keep track of your ECO-rating!</p>
          <div class="form-container">
       <%= simple_form_for @garment do |f| %>
+        <%= f.input :name, label: "Name of garment" %>
               <div class="">
         <%= f.association :brand, collection: Brand.order('name ASC') %>
           </div>
