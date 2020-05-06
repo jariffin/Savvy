@@ -1,3 +1,54 @@
 .row-container {
+  background-color: white;
+}
+
+.card-product-information h2 {
+  text-align: center;
+}
+
+.card-product-information p {
+  padding: 16px;
+}
+
+.good h2 {
+  color: #32CD32;
+  font-weight: bold;
+}
+
+.bad h2 {
+  color: #FF8C00;
+  font-weight: bold;
+}
+
+.ugly h2 {
+  color: #B22222;
+  font-weight: bold;
+}
+
+.good .card-product {
   background-color: #f7fff6;
+}
+
+.bad .card-product {
+  background-color: #fff8f0;
+}
+
+.ugly .card-product {
+  background-color: #ffe6ee;
+}
+
+.page-buttons p {
+  text-align: center;
+}
+.improve ul {
+  max-width: 520px;
+  display: block;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.fa-leaf {
+  color: #32CD32;
 }

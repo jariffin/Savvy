@@ -14,4 +14,60 @@
   display: flex;
 }
 
+.tag {
+  align: center;
+}
 
+.button-label {
+  font-size: 20px;
+}
+
+.button-label-text {
+  font-size: 12px;
+}
+
+
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .div-material {
+  display: inline-block;
+  }
+  .container-form {
+  width: 300px;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .div-material {
+  display: inline-block;
+  }
+  .container-form {
+  width: 400px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .div-material {
+  display: inline-block;
+  }
+  .container-form {
+  min-width: 600px;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+      .div-material {
+  display: inline-block;
+  }
+  .container-form {
+  min-width: 900px;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
