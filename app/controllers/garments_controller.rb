@@ -35,9 +35,6 @@ class GarmentsController < ApplicationController
 
   def update
     @garment = Garment.find(params[:id])
-   # @garment.name = @garment.find(params[:name])
-   # @garment.brand = @garment.find(params[:brand])
-   # @garment.image = @garment.find(params[:image])
     if @garment.update(garments_params)
       @purchase = Purchase.new(garment_id: @garment.id)
       @purchase.user = current_user
