@@ -25,10 +25,14 @@
     <br>
     <hr class="solid">
     <p>Do you own this <%= @garment.name %>? Add to your closet to keep track of your ECO-rating!</p>
+         <div class="form-container">
     <% if user_signed_in?%>
-      <%= simple_form_for (@garment) do |f| %>
+      <%= simple_form_for @garment do |f| %>
+              <div class="">
         <%= f.association :brand, collection: Brand.order('name ASC') %>
+          </div>
         <%= f.input :image, as: :file, label: "Image of garment" %>
+      </div>
         <%= f.button :submit, "Add garment to closet", class: "btn btn-primary mt-4" %>
       <% end %>
     <% end %>
