@@ -17,8 +17,26 @@
     margin-left: 0px;
 }
 
+.buttons-container {
+  display: flex;
+}
+
+.form-container {
+  text-align: left;
+}
+
+.buttons-box p {
+  font-size: 10px;
+  margin-bottom: 0px;
+}
+
+.buttons-box .button-icon {
+  font-size: 25px;
+}
+
 #slogan {
   color: #808080;
   font-family: Damion;
   font-size: 24px;
 }
+
