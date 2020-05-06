@@ -1,7 +1,7 @@
 
 <div class="background p-3">
   <div class="rating-box col-md-5 container center-align shadow">
-    <h4>Your ECO-rating for <%= @garment.name %></h4>
+    <h4>Your ECO-rating for your garment</h4>
     <p id="slogan"><small> <%= @garment.slogan %> </small></p>
     <h1 class= "<%= @garment.percent_color %>"> <%= @garment_rating%>%</h1>
     <h5><%= link_to 'Materials', materials_path %></h5>
@@ -25,7 +25,7 @@
     <% if !user_signed_in? || !current_user.purchases.map(&:garment_id).include?(@garment.id)%>
     <br>
     <hr class="solid">
-    <p>Do you own this <%= @garment.name %>? Add to your closet to keep track of your ECO-rating!</p>
+    <p>Do you own this garment? Add to your closet to keep track of your ECO-rating!</p>
          <div class="form-container">
       <%= simple_form_for @garment do |f| %>
         <%= f.input :name, label: "Name of garment" %>

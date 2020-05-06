@@ -1,12 +1,12 @@
 <div class="main-container">
   <div class="title">
+    <p><%= flash[:notice]%></p>
     <h1>MY CLOSET <i class="fas fa-seedling"></i>
     </h1>
     <h2>Your total ECO-score is <%= link_to "#{@average.round(1)}%", score_information_path, class: @color %>
       out of <%= @purchases.count %> items.</h2>
       <p><%= link_to "Scan a garment", new_garment_path, class: "btn btn-primary mt-4" %>
       </p>
-      <p><%= flash[:notice]%></p>
       <div class="share">
         <p>Share your score</p>
         <div class="links-socialmedia">

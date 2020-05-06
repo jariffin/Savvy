@@ -35,9 +35,6 @@ class GarmentsController < ApplicationController
 
   def update
     @garment = Garment.find(params[:id])
-   # @garment.name = @garment.find(params[:name])
-   # @garment.brand = @garment.find(params[:brand])
-   # @garment.image = @garment.find(params[:image])
     if @garment.update(garments_params)
       @purchase = Purchase.new(garment_id: @garment.id)
       @purchase.user = current_user
@@ -51,7 +48,7 @@ class GarmentsController < ApplicationController
   private
 
   def garments_params
-    params.require(:garment).permit(:name, :brand, :image, :tag, blends_attributes: [:material_id, :percentage_material, :id, :_destroy])
+    params.require(:garment).permit(:name, :brand_id, :image, :tag, blends_attributes: [:material_id, :percentage_material, :id, :_destroy])
   end
 
 end
