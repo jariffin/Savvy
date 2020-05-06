@@ -3,12 +3,14 @@
   <div class="rating-box col-md-5 container center-align shadow">
     <h4>Your ECO-rating for your garment</h4>
     <p id="slogan"><small> <%= @garment.slogan %> </small></p>
-    <h1 class= "<%= @garment.percent_color %>"> <%= @garment_rating%>%</h1>
+    <div class= "percent d-flex justify-content-around">
+      <h1 class= <%= @garment.percent_color %>> <%= link_to "#{@garment_rating}%", score_information_path, class: @garment.percent_color %></h1>
+    </div>
     <h5><%= link_to 'Materials', materials_path %></h5>
     <% @garment.blends.each do |blend| %>
     <p class="material"><em><%= blend.percentage_material %>% <%= link_to "#{blend.material.name}", materials_path(anchor: "#{blend.material.name.downcase}")%></em></p>
     <% end %>
-    <div class="ruler d-flex justify-content-around">
+    <div class= "ruler d-flex justify-content-around">
       <div class="box">
         <p>0-49</p>
         <p>Not eco recommended</p>

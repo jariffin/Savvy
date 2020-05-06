@@ -23,14 +23,22 @@
   color: black;
 }
 
-.red {
+.red a {
+  text-decoration: none;
   color: #B22222;
 }
 
-.yellow {
+.yellow a {
+  text-decoration: none;
   color: #FF8C00;
 }
 
-.green {
+.green a {
+  text-decoration: none;
   color: #32CD32;
 }
+
+.percent h1 a:hover {
+  transform: scale(1.02);
+}
+
