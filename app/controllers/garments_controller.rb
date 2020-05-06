@@ -33,6 +33,16 @@ class GarmentsController < ApplicationController
 
   end
 
+  def update
+    @garment = Garment.find(params[:id])
+    if @garment.update(garments_params)
+      #redirect to new purchase
+      redirect_to new_garment_purchase_path(@garment)
+    else
+      flash.alert = "Cannot update"
+    end
+  end
+
   private
 
   def garments_params
