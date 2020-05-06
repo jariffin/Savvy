@@ -35,9 +35,14 @@ class GarmentsController < ApplicationController
 
   def update
     @garment = Garment.find(params[:id])
+   # @garment.name = @garment.find(params[:name])
+   # @garment.brand = @garment.find(params[:brand])
+   # @garment.image = @garment.find(params[:image])
     if @garment.update(garments_params)
-      #redirect to new purchase
-      redirect_to new_garment_purchase_path(@garment)
+      @purchase = Purchase.new(garment_id: @garment.id)
+      @purchase.user = current_user
+      @purchase.save
+      redirect_to purchases_path, notice:  "Garment successfully added to closet!"
     else
       flash.alert = "Cannot update"
     end
@@ -46,7 +51,7 @@ class GarmentsController < ApplicationController
   private
 
   def garments_params
-    params.require(:garment).permit(:tag, blends_attributes: [:material_id, :percentage_material, :id, :_destroy])
+    params.require(:garment).permit(:name, :brand, :image, :tag, blends_attributes: [:material_id, :percentage_material, :id, :_destroy])
   end
 
 end
