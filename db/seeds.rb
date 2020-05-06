@@ -193,15 +193,15 @@ dress2.save!
 
 puts "Creating Purchases..."
 
-Purchase.create!(garment_id: jeans.id, user_id: sandy.id)
-Purchase.create!(garment_id: dress.id, user_id: sandy.id)
-Purchase.create!(garment_id: pants.id, user_id: sandy.id)
-Purchase.create!(garment_id: shirt.id, user_id: sandy.id)
-Purchase.create!(garment_id: linen_coat.id, user_id: sandy.id)
 Purchase.create!(garment_id: jeans2.id, user_id: sandy.id)
 Purchase.create!(garment_id: dress2.id, user_id: sandy.id)
 Purchase.create!(garment_id: sweater.id, user_id: sandy.id)
 Purchase.create!(garment_id: socks.id, user_id: sandy.id)
+Purchase.create!(garment_id: pants.id, user_id: sandy.id)
+Purchase.create!(garment_id: shirt.id, user_id: sandy.id)
+Purchase.create!(garment_id: linen_coat.id, user_id: sandy.id)
+Purchase.create!(garment_id: dress.id, user_id: sandy.id)
+Purchase.create!(garment_id: jeans.id, user_id: sandy.id)
 
 puts "Done!"
 
