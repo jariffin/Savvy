@@ -151,21 +151,21 @@ jeans.save!
 file_4 = URI.open("https://images.unsplash.com/photo-1564584217132-2271feaeb3c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80")
 shirt = Garment.new(name: "Shirt", brand_id: zara.id)
 shirt.image.attach(io: file_4, filename: "image.jpeg", content_type: "image/jpeg")
-create_blend(cotton, shirt, 100)
+create_blend(cotton, shirt, 50)
+create_blend(hemp, shirt, 50)
 shirt.save!
 
 file_5 = URI.open("https://images.pexels.com/photos/2146344/pexels-photo-2146344.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260")
 linen_coat = Garment.new(name: "Linen coat", brand_id: uniqlo.id)
 linen_coat.image.attach(io: file_5, filename: "image.jpeg", content_type: "image/jpeg")
-create_blend(cotton, linen_coat, 50)
-create_blend(linen, linen_coat, 50)
+create_blend(cotton, linen_coat, 40)
+create_blend(linen, linen_coat, 60)
 linen_coat.save!
 
 file_6 = URI.open("https://images.pexels.com/photos/1082526/pexels-photo-1082526.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260")
 jeans2 = Garment.new(name: "Jeans", brand_id: massimodutti.id)
 jeans2.image.attach(io: file_6, filename: "image.jpeg", content_type: "image/jpeg")
-create_blend(cotton, jeans2, 85)
-create_blend(polyester, jeans2, 15)
+create_blend(cotton, jeans2, 100)
 jeans2.save!
 
 file_7 = URI.open("https://images.unsplash.com/photo-1571729024267-e0120826dfe6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80")
@@ -186,15 +186,64 @@ file_9 = URI.open("https://images.unsplash.com/photo-1581798117964-aa8a5238c350?
 dress2 = Garment.new(name: "Dress", brand_id: mango.id)
 dress2.image.attach(io: file_9, filename: "image.jpeg", content_type: "image/jpeg")
 create_blend(cotton, dress2, 50)
-create_blend(modal, dress2, 29)
-create_blend(polyamide, dress2, 21)
+create_blend(linen, dress2, 50)
 dress2.save!
+
+file_10 = URI.open("https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?ixlib=rb-1.2.1&auto=format&fit=crop&w=2468&q=80")
+shirt2 = Garment.new(name: "T-Shirt", brand_id: ganni.id)
+shirt2.image.attach(io: file_10, filename: "image.jpeg", content_type: "image/jpeg")
+create_blend(cotton, shirt2, 97)
+create_blend(elastane, shirt2, 3)
+shirt2.save!
+
+file_11 = URI.open("https://images.unsplash.com/photo-1535486607281-4fc90307a8bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80")
+socks2 = Garment.new(name: "Socks", brand_id: fred_perry.id)
+socks2.image.attach(io: file_11, filename: "image.jpeg", content_type: "image/jpeg")
+create_blend(cotton, socks2, 100)
+socks2.save!
+
+file_12 = URI.open("https://images.pexels.com/photos/45982/pexels-photo-45982.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+sweater2 = Garment.new(name: "Sweater", brand_id: coach.id)
+sweater2.image.attach(io: file_12, filename: "image.jpeg", content_type: "image/jpeg")
+create_blend(cotton, sweater2, 50)
+create_blend(wool, sweater2, 50)
+sweater2.save!
+
+file_13 = URI.open("https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+skirt = Garment.new(name: "Skirt", brand_id: roksanda.id)
+skirt.image.attach(io: file_13, filename: "image.jpeg", content_type: "image/jpeg")
+create_blend(hemp, skirt, 100)
+skirt.save!
+
+file_14 = URI.open("https://images.pexels.com/photos/2569819/pexels-photo-2569819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+rain_coat = Garment.new(name: "Rain Coat", brand_id: etro.id)
+rain_coat.image.attach(io: file_14, filename: "image.jpeg", content_type: "image/jpeg")
+create_blend(nylon, rain_coat, 87)
+create_blend(spandex, rain_coat, 13)
+rain_coat.save!
+
+file_15 = URI.open("https://images.unsplash.com/photo-1543076447-215ad9ba6923?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80")
+jacket2 = Garment.new(name: "Jacket", brand_id: calvin_klein.id)
+jacket2.image.attach(io: file_15, filename: "image.jpeg", content_type: "image/jpeg")
+create_blend(cotton, jacket2, 100)
+jacket2.save!
+
+file_16 = URI.open("https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=649&q=80")
+poncho = Garment.new(name: "Poncho", brand_id: nanushka.id)
+poncho.image.attach(io: file_16, filename: "image.jpeg", content_type: "image/jpeg")
+create_blend(cotton, poncho, 70)
+create_blend(acrylic, poncho, 30)
+poncho.save!
 
 
 puts "Creating Purchases..."
 
+Purchase.create!(garment_id: shirt2.id, user_id: sandy.id)
+Purchase.create!(garment_id: socks2.id, user_id: sandy.id)
 Purchase.create!(garment_id: jeans2.id, user_id: sandy.id)
+Purchase.create!(garment_id: rain_coat.id, user_id: sandy.id)
 Purchase.create!(garment_id: dress2.id, user_id: sandy.id)
+Purchase.create!(garment_id: sweater2.id, user_id: sandy.id)
 Purchase.create!(garment_id: sweater.id, user_id: sandy.id)
 Purchase.create!(garment_id: socks.id, user_id: sandy.id)
 Purchase.create!(garment_id: pants.id, user_id: sandy.id)
@@ -202,6 +251,9 @@ Purchase.create!(garment_id: shirt.id, user_id: sandy.id)
 Purchase.create!(garment_id: linen_coat.id, user_id: sandy.id)
 Purchase.create!(garment_id: dress.id, user_id: sandy.id)
 Purchase.create!(garment_id: jeans.id, user_id: sandy.id)
+Purchase.create!(garment_id: skirt.id, user_id: sandy.id)
+Purchase.create!(garment_id: jacket2.id, user_id: sandy.id)
+Purchase.create!(garment_id: poncho.id, user_id: sandy.id)
 
 puts "Done!"
 
