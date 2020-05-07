@@ -117,6 +117,7 @@ rag_bone = Brand.create!(name: "Rag & Bone", email: "help@rag-bone.com", website
 roksanda = Brand.create!(name: "Roksanda", email: "enquiries@roksanda.com.", website: "www.roksanda.com")
 walter_baker = Brand.create!(name: "Walter Baker", email: "info@walterbaker.com.", website: "www.walterbaker.com")
 zimmermann = Brand.create!(name: "Zimmermann", email: "customerservice.eu@zimmermann.com", website: "www.zimmermannwear.com")
+superdry = Brand.create!(name: "Superdry®", email: "care@superdry.com", website: "https://www.superdry.com/")
 
 puts "Creating Garments..."
 
