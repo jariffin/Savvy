@@ -4,6 +4,10 @@
     background-color: $light-gray;
     text-align: center;
 
+    .container {
+      padding: 50px;
+    }
+
     .red a {
       text-decoration: none;
       color: #B22222;
@@ -54,5 +58,4 @@
 .percent h1 a:hover {
   transform: scale(1.02);
 }
-
 
