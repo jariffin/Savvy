@@ -20,7 +20,7 @@
 }
 
 .card-product p {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
@@ -34,6 +34,7 @@
 .rating {
   display: flex;
   justify-content: space-between;
+  font-size: 18px;
 }
 
 .card-description {
@@ -42,6 +43,11 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   align-items: left;
   padding: 8px;
+}
+
+.card-product-infos p mark {
+  background-color: #e0afa0;
+  color: black;
 }
 
 
