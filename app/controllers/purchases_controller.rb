@@ -15,7 +15,7 @@ class PurchasesController < ApplicationController
     @purchases = Purchase.all
     percentages = @purchases.map {|purchase| purchase.garment.percentage }
     @average = percentages.sum(0.0) / percentages.size
-    if (@average < 85 && @average > 50)
+    if (@average < 75 && @average > 50)
       @color = 'yellow'
     elsif @average < 50
       @color = 'red'

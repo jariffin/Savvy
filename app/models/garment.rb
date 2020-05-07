@@ -56,7 +56,7 @@ class Garment < ApplicationRecord
 
 
   def percent_color
-      if (self.percentage < 85 && self.percentage >= 50)
+      if (self.percentage < 75 && self.percentage >= 50)
         'yellow'
       elsif self.percentage < 50
         'red'
