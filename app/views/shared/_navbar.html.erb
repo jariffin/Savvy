@@ -2,9 +2,10 @@
   <%= link_to "S A V V Y .", "/", class: "nav-link" %>
 
     <% if user_signed_in? %>
-      <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "btn btn-link") %>
+        <div class="px-3 mx-5"><%= current_user.email %></div>
+        <div class=><%= link_to('Logout', destroy_user_session_path, method: :delete, class: "btn btn-link") %></div>
     <% else %>
-      <a href="/users/sign_in"><i class="far fa-user"></i></a>
+      <a href="/users/sign_in"><i class="fa fa-user"></i></a>
     <% end %>
 </div>
 
