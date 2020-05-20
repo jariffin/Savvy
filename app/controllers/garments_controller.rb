@@ -4,11 +4,13 @@ class GarmentsController < ApplicationController
     @garment = Garment.new
     @garment.blends.build
     @garment.materials.build
+    authorize @garment
   end
 
   def create
     @brand = Brand.new
     @garment = Garment.new(garments_params)
+    authorize @garment
     if @garment.blends.length.zero? && !params[:garment][:tag].nil?
       tag_text = RTesseract.new(params[:garment][:tag].tempfile.path).to_s
       @garment.tag_text = tag_text
@@ -26,6 +28,7 @@ class GarmentsController < ApplicationController
 
   def show
     @garment = Garment.find(params[:id])
+    authorize @garment
     @garment_rating = @garment.percentage
   end
 
